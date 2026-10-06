@@ -1,0 +1,76 @@
+/* ===== Youverify webfonts (BR Sonoma) ===== */
+@font-face { font-family: "BR Sonoma"; src: url("/fonts/BRSonoma-Regular.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "BR Sonoma"; src: url("/fonts/BRSonoma-Medium.otf") format("opentype"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "BR Sonoma"; src: url("/fonts/BRSonoma-SemiBold.otf") format("opentype"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "BR Sonoma"; src: url("/fonts/BRSonoma-Bold.otf") format("opentype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "BR Sonoma"; src: url("/fonts/BRSonoma-Black.otf") format("opentype"); font-weight: 800 900; font-style: normal; font-display: swap; }
+
+/* ===== Tokens (Youverify design system subset used by this page) ===== */
+:root {
+  --deep: #115766;
+  --deep-ink: #0B3842;
+  --blue: #46B2C8;
+  --blue-light: #90D0DE;
+  --seaweed: #0F808C;
+  --mint: #21BFAF;
+  --orange: #FF993C;
+  --red: #C2453D;
+
+  --teal-200: #C7E8F0;
+  --teal-100: #E3F3F7;
+  --teal-50: #F3FAFC;
+  --surface-alt: #F8FBFC;
+
+  --ink: #0E181C;
+  --ink-2: #3E4C52;
+  --ink-3: #7E8C92;
+  --muted: #5A6A70;
+  --faint: #9AA7AC;
+  --border: #E4E9EC;
+  --border-strong: #CBD4D8;
+  --hairline: #F1F5F6;
+
+  --font-sans: "BR Sonoma", "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Eyebrow letter-spacing; Arabic script must not be tracked. */
+  --ls: 0.14em;
+}
+html[lang="ar"] { --ls: 0; }
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #FFFFFF; scroll-behavior: smooth; }
+body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; color: var(--ink); }
+a { color: var(--deep); text-decoration: none; }
+a:hover { color: var(--seaweed); }
+[id] { scroll-margin-top: 72px; }
+button { font-family: inherit; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+/* ===== Shared layout + type primitives ===== */
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+.split { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 56px; align-items: center; }
+.band-alt { background: var(--surface-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: var(--ls); color: var(--seaweed); }
+.h2 { margin: 12px 0 0; font-size: clamp(22px, 2.3vw, 30px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; color: var(--deep-ink); }
+.hl { color: var(--blue); }
+.lede { font-size: 15px; color: var(--ink-2); line-height: 1.7; margin: 12px 0 0; }
+.mono { font-family: var(--font-mono); }
+
+.card { background: #FFFFFF; border: 1px solid var(--border); }
+.panel { background: var(--teal-50); border-radius: 24px; }
+
+.badge { font-size: 11px; font-weight: 800; border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+.badge--review { color: #3A1E00; background: var(--orange); }
+.badge--stop { color: #FFFFFF; background: var(--red); }
+.badge--proceed { color: #06242B; background: var(--mint); }
+
+.pill { display: inline-block; font-size: 11px; font-weight: 700; padding: 4px 9px; border-radius: 999px; white-space: nowrap; }
+.pill--DIGITAL { background: var(--teal-100); color: var(--seaweed); }
+.pill--AUTHENTICATED { background: #E6F0F8; color: #1C6FA0; }
+.pill--CONFIRMED { background: var(--hairline); color: var(--muted); }
+.pill--FAILED { background: #FDECEA; color: #B0322A; }
+
+.btn { display: inline-block; background: var(--deep); color: #FFFFFF; font-weight: 700; border: 0; cursor: pointer; }
+.btn:hover { color: #FFFFFF; background: #0E4A57; }
