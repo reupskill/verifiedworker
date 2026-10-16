@@ -12,85 +12,105 @@ const LOGOS = [
 ]
 const METHOD_LABEL = { DIGITAL: 'mDig', AUTHENTICATED: 'mAuth', CONFIRMED: 'mConf' } as const
 
-// Philippines first: it's the pilot corridor and Juan's story.
-const country = ref(4)
-
-const authorities = computed(() =>
-  t.value.auth[country.value]!.map((a, j) => ({
-    ...a,
-    logo: `/assets/sources/${LOGOS[country.value]![j]}.png`,
-    label: t.value[METHOD_LABEL[a.m]],
+const rows = computed(() =>
+  t.value.countries.map((country, i) => ({
+    country,
+    auths: t.value.auth[i]!.map((a, j) => ({
+      ...a,
+      logo: `/assets/sources/${LOGOS[i]![j]}.png`,
+      label: t.value[METHOD_LABEL[a.m]],
+    })),
   })),
 )
+
+const stats = computed(() => [
+  { v: '18', l: t.value.srcS1 },
+  { v: '6', l: t.value.srcS2 },
+  { v: '100%', l: t.value.srcS3 },
+])
+
+const legend = computed(() => [
+  { c: '#0F808C', k: t.value.mDig, d: t.value.mDigD },
+  { c: '#1C6FA0', k: t.value.mAuth, d: t.value.mAuthD },
+  { c: '#7E8C92', k: t.value.mConf, d: t.value.mConfD },
+])
 </script>
 
 <template>
   <section id="sources" class="wrap sources">
-    <div class="grid">
+    <div class="top">
       <div>
         <div class="eyebrow">{{ t.srcE }}</div>
-        <h2 class="h2">{{ t.srcH }}</h2>
+        <h2 class="h2 big">{{ t.srcH }}</h2>
         <p class="lede p">{{ t.srcP }}</p>
-        <div class="tabs" role="tablist" :aria-label="t.srcE">
-          <button
-            v-for="(n, i) in t.countries" :key="i"
-            type="button" role="tab" class="tab" :class="{ on: country === i }"
-            :aria-selected="country === i" @click="country = i"
-          >
-            <span>{{ n }}</span>
-            <span class="count">3</span>
-          </button>
-        </div>
-        <div class="legend">
-          <span><span class="ld" style="background: #0F808C" />{{ t.mDig }}</span>
-          <span><span class="ld" style="background: #1C6FA0" />{{ t.mAuth }}</span>
-          <span><span class="ld" style="background: #7E8C92" />{{ t.mConf }}</span>
+      </div>
+      <div class="stats">
+        <div v-for="s in stats" :key="s.v" class="stat">
+          <div class="sv">{{ s.v }}</div>
+          <div class="sl">{{ s.l }}</div>
         </div>
       </div>
+    </div>
 
-      <div class="panel box" role="tabpanel">
-        <div class="box-head">
-          <span class="country">{{ t.countries[country] }}</span>
-          <span class="sub">{{ t.srcPanelSub }}</span>
+    <div class="table">
+      <div v-for="r in rows" :key="r.country" class="row">
+        <div class="country">
+          <span class="cn">{{ r.country }}</span>
+          <span class="cs">{{ t.srcPanelSub }}</span>
         </div>
-        <div class="auths">
-          <div v-for="a in authorities" :key="a.logo" class="card auth">
-            <div class="logo"><img :src="a.logo" :alt="a.n" loading="lazy"></div>
-            <div class="an">{{ a.n }}</div>
-            <div class="av">{{ a.v }}</div>
-            <span class="pill" :class="`pill--${a.m}`">{{ a.label }}</span>
+        <div v-for="a in r.auths" :key="a.logo" class="auth">
+          <div class="logo"><img :src="a.logo" :alt="a.n" loading="lazy"></div>
+          <div class="txt">
+            <span class="an">{{ a.n }}</span>
+            <span class="av">{{ a.v }}</span>
+            <span class="tag" :class="`pill--${a.m}`">{{ a.label }}</span>
           </div>
         </div>
-        <div class="foot">{{ t.srcFoot }}</div>
       </div>
+    </div>
+
+    <div class="below">
+      <div class="legend">
+        <span v-for="l in legend" :key="l.k"><span class="ld" :style="{ background: l.c }" /><strong>{{ l.k }}</strong>{{ l.d }}</span>
+      </div>
+      <div class="foot">{{ t.srcFoot }}</div>
     </div>
   </section>
 </template>
 
 <style scoped>
-.sources { padding-top: 80px; padding-bottom: 80px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 48px; align-items: start; }
-.p { font-size: 14.5px; }
-.tabs { display: flex; flex-direction: column; gap: 4px; margin-top: 24px; }
-.tab { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 14px; border-radius: 11px; cursor: pointer; font-size: 14.5px; font-weight: 600; color: var(--deep-ink); background: transparent; border: 0; text-align: start; }
-.tab:hover { background: var(--teal-50); }
-.tab.on { font-weight: 700; color: #FFFFFF; background: var(--deep); }
-.count { font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--hairline); color: var(--ink-3); }
-.tab.on .count { background: rgba(255, 255, 255, 0.18); color: #FFFFFF; }
-.legend { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 22px; font-size: 12.5px; color: var(--muted); }
-.legend > span { display: flex; align-items: center; gap: 6px; }
-.ld { width: 8px; height: 8px; border-radius: 50%; }
+.sources { padding-top: 88px; padding-bottom: 88px; }
+.top { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 32px; align-items: end; }
+.p { max-width: 520px; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.stat { background: var(--teal-50); border-radius: 14px; padding: 14px 16px; }
+.sv { font-size: 26px; font-weight: 800; color: var(--deep); line-height: 1; }
+.sl { font-size: 12px; color: var(--muted); margin-top: 6px; }
 
-.box { padding: 24px; }
-.box-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
-.country { font-size: 18px; font-weight: 800; color: var(--deep-ink); }
-.sub { font-size: 12.5px; color: var(--muted); }
-.auths { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 12px; }
-.auth { border-radius: 16px; padding: 16px; }
-.logo { height: 64px; display: flex; align-items: center; justify-content: center; }
+.table { margin-top: 36px; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 22px; overflow: hidden; }
+.row { display: grid; grid-template-columns: minmax(140px, 0.7fr) repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; padding: 16px 20px; align-items: stretch; }
+.row + .row { border-top: 1px solid var(--border); }
+.country { display: flex; flex-direction: column; justify-content: center; gap: 3px; }
+.cn { font-size: 15px; font-weight: 800; color: var(--deep-ink); }
+.cs { font-size: 12px; color: var(--ink-3); }
+.auth { display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 1px solid var(--border); border-radius: 14px; padding: 10px 12px; }
+.logo { width: 64px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
 .logo img { max-width: 100%; max-height: 100%; display: block; }
-.an { font-size: 13.5px; font-weight: 700; color: var(--deep-ink); margin-top: 14px; }
-.av { font-size: 12.5px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
-.pill { margin-top: 10px; padding: 3px 9px; }
-.foot { font-size: 12.5px; color: var(--muted); margin-top: 16px; line-height: 1.55; }
+.txt { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.an { font-size: 13px; font-weight: 700; color: var(--deep-ink); line-height: 1.3; }
+.av { font-size: 12px; color: var(--muted); line-height: 1.35; }
+.tag { align-self: flex-start; margin-top: 3px; font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; }
+
+.below { display: flex; justify-content: space-between; gap: 16px 28px; flex-wrap: wrap; margin-top: 16px; align-items: center; }
+.legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink-2); }
+.legend > span { display: flex; align-items: center; gap: 7px; }
+.legend strong { color: var(--deep-ink); }
+.ld { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.foot { font-size: 12.5px; color: var(--muted); max-width: 460px; line-height: 1.5; }
+
+@media (max-width: 520px) {
+  .row { grid-template-columns: minmax(0, 1fr); padding: 14px; }
+  .stat { padding: 12px; }
+  .sv { font-size: 22px; }
+}
 </style>

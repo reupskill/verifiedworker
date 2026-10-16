@@ -1,4 +1,4 @@
-// Verified Worker landing page (Elm × Youverify).
+// Vetted Worker landing page (Elm, in partnership with Youverify).
 // Static-first: `npm run generate` produces a fully static site in .output/public.
 export default defineNuxtConfig({
   compatibilityDate: '2026-10-01',
@@ -6,13 +6,13 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   app: {
     head: {
-      title: 'Verified Worker · Elm × Youverify',
+      title: 'Vetted Worker · An Elm service',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
           content:
-            'Verified Worker by Elm and Youverify: identity, police record, employers and a hiring decision, all settled before the visa.',
+            'Vetted Worker by Elm, in partnership with Youverify, confirms every overseas hire\'s identity, police record, qualifications and work history with the authorities that issued them, before the visa.',
         },
         { name: 'theme-color', content: '#115766' },
       ],

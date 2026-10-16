@@ -6,9 +6,8 @@ const { t } = useLang()
   <section id="pilot" class="pilot">
     <div class="wrap grid">
       <div>
-        <div class="eyebrow">{{ t.pilotE }}</div>
+        <div v-if="t.pilotE" class="eyebrow">{{ t.pilotE }}</div>
         <h2 class="h2">{{ t.pilotH }}</h2>
-        <p class="lede">{{ t.pilotP }}</p>
         <div class="terms">
           <div class="card term"><div class="th">{{ t.provH }}</div><div class="tb">{{ t.provB }}</div></div>
           <div class="card term"><div class="th">{{ t.recvH }}</div><div class="tb">{{ t.recvB }}</div></div>

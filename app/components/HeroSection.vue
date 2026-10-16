@@ -28,6 +28,13 @@ const pins = computed(() => [
         <p class="lede intro">{{ t.heroP }}</p>
         <div class="ctas">
           <a href="#pilot" class="btn cta">{{ t.cta1 }}</a>
+          <a href="#how" class="cta cta--ghost">{{ t.cta2 }}</a>
+        </div>
+        <div class="proof">
+          <div v-for="p in t.proof" :key="p.v">
+            <div class="pv">{{ p.v }}</div>
+            <div class="pl">{{ p.l }}</div>
+          </div>
         </div>
         <div class="certs">
           <span class="certs-t">{{ t.certT }}</span>
@@ -64,8 +71,13 @@ const pins = computed(() => [
 h1 { margin: 16px 0 0; font-size: clamp(30px, 3.4vw, 44px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.08; color: var(--deep-ink); }
 .intro { margin-top: 16px; max-width: 500px; }
 .ctas { display: flex; gap: 10px; margin-top: 28px; flex-wrap: wrap; }
-.cta { border-radius: 10px; padding: 12px 18px; font-size: 14px; box-shadow: 0 6px 18px rgba(17, 87, 102, 0.22); }
-.certs { margin-top: 36px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.cta { border-radius: 10px; padding: 13px 20px; font-size: 14.5px; box-shadow: 0 6px 18px rgba(17, 87, 102, 0.22); }
+.cta--ghost { background: #FFFFFF; color: var(--deep); border: 1px solid var(--border-strong); padding: 12px 20px; font-weight: 700; box-shadow: none; }
+.cta--ghost:hover { color: var(--deep); border-color: var(--deep); }
+.proof { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 110px), 1fr)); gap: 18px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--teal-200); }
+.pv { font-size: 20px; font-weight: 800; color: var(--deep); line-height: 1; letter-spacing: -0.01em; }
+.pl { font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+.certs { margin-top: 22px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .certs-t { font-size: 12px; font-weight: 700; color: var(--ink-3); }
 .cert { font-size: 11.5px; font-weight: 700; color: var(--deep); background: #FFFFFF; border: 1px solid var(--teal-200); padding: 4px 9px; border-radius: 7px; }
 

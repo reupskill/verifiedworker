@@ -1,4 +1,4 @@
-// Bilingual copy for the Verified Worker landing page.
+// Bilingual copy for the Vetted Worker landing page (design: Landing v3).
 // The Arabic was drafted alongside the design; have a native speaker review it
 // (job levels and government authority names especially) before launch.
 
@@ -6,13 +6,150 @@ export type Lang = 'en' | 'ar'
 export type Method = 'DIGITAL' | 'AUTHENTICATED' | 'CONFIRMED'
 
 const en = {
-  "navCta": "Request a pilot",
-  "heroE": "ELM × YOUVERIFY · VERIFIED WORKER",
-  "h1a": "Every worker arrives with a ",
-  "h1b": "story",
+  "proof": [
+    {
+      "v": "5 min",
+      "l": "for the worker, on their own phone"
+    },
+    {
+      "v": "Seconds",
+      "l": "for identity and watchlists"
+    },
+    {
+      "v": "5–10 days",
+      "l": "for a full source-checked report"
+    },
+    {
+      "v": "18",
+      "l": "issuing authorities in 6 countries"
+    }
+  ],
+  "valE": "WHAT YOU GET",
+  "valH": "Fewer wrong hires. Faster deployment. Decisions you can defend.",
+  "val": [
+    {
+      "k": "01",
+      "h": "Stop the wrong hire early",
+      "b": "Forged certificates and borrowed identities are caught before the recruitment fee, visa and flights are paid for."
+    },
+    {
+      "k": "02",
+      "h": "Deploy good workers faster",
+      "b": "Clean files move straight to visa. No chasing documents, no waiting on agents, no guesswork."
+    },
+    {
+      "k": "03",
+      "h": "Defend every decision",
+      "b": "Every result carries its source, method and consent record — ready for an auditor, a client or a dispute."
+    }
+  ],
+  "calcE": "THE COST OF GETTING IT WRONG",
+  "calcH": "What wrong hires cost you every year.",
+  "calcP": "Every failed placement is paid for twice: the recruitment fee, visa and flights, then a replacement and the weeks the role sits empty.",
+  "calcHires": "Overseas hires per year",
+  "calcCost": "Cost per hire (SAR)",
+  "calcRate": "Placements that fail (%)",
+  "calcEx": "Example figures. Enter your own.",
+  "calcOutL": "SPENT ON WRONG HIRES EACH YEAR",
+  "calcSub": "{n} failed placements × SAR {c}",
+  "calcNote": "Vetted Worker runs before any of this money is committed. A free pilot shows what it finds in your own intake.",
+  "calcCta": "Test it on my next intake",
+  "howE": "HOW IT WORKS",
+  "howH": "Two applicants. Nine days. One clear answer.",
+  "howP": "One link to the worker's phone. Every claim checked with the authority that issued it. A clear decision for your team before a riyal is spent on visas or flights.",
+  "howSteps": [
+    {
+      "d": "Day 1",
+      "n": "Invite",
+      "href": "#invite"
+    },
+    {
+      "d": "Day 1",
+      "n": "Identity",
+      "href": "#identity"
+    },
+    {
+      "d": "Days 2–7",
+      "n": "Source",
+      "href": "#source"
+    },
+    {
+      "d": "Day 9",
+      "n": "History",
+      "href": "#history"
+    },
+    {
+      "d": "Day 4 · 9",
+      "n": "Decision",
+      "href": "#decision"
+    }
+  ],
+  "howAsifR": "Lahore · electrician. Stopped before the visa — no fees lost.",
+  "howJuanR": "Manila · caregiver. Cleared, with one question for interview.",
+  "audE": "WHO IT'S FOR",
+  "audH": "Built for everyone whose name is on the hire.",
+  "aud": [
+    {
+      "h": "Employers",
+      "b": "Hire with confidence and cut the cost of replacements, incidents and failed probation.",
+      "pts": [
+        "Report before the visa is issued",
+        "Dashboard or API into your HR system",
+        "Arabic and English reports"
+      ]
+    },
+    {
+      "h": "Recruitment agencies",
+      "b": "Deliver verified candidates and win contracts on proof, not promises.",
+      "pts": [
+        "A verified report for every client",
+        "Fewer rejected deployments",
+        "Stand out in every tender"
+      ]
+    },
+    {
+      "h": "Home-care and domestic services",
+      "b": "Know exactly who is entering a family's home before they arrive.",
+      "pts": [
+        "Police record checked at source",
+        "Identity and live face match",
+        "Past employers confirmed"
+      ]
+    }
+  ],
+  "faqE": "BEFORE YOU START",
+  "faqH": "Questions buyers ask.",
+  "faq": [
+    {
+      "q": "Does the worker pay anything?",
+      "a": "No. The worker uses a free, secure link on their own phone and sees exactly what will be checked before giving consent."
+    },
+    {
+      "q": "How fast are results?",
+      "a": "Identity, face match and watchlists come back in seconds. Checks with police, schools and employers take 5–10 working days."
+    },
+    {
+      "q": "Is it compliant with Saudi law?",
+      "a": "Yes. Every check needs the worker's consent, in line with the Personal Data Protection Law, on a platform certified to SOC 2 Type II, ISO 27001 and ISO 27018."
+    },
+    {
+      "q": "What if a record isn't online?",
+      "a": "Accredited local partners verify it with the issuer on the ground, and the report says exactly how it was checked."
+    },
+    {
+      "q": "How does it fit our systems?",
+      "a": "Start in the dashboard on day one, or connect by API to your HR or recruitment system."
+    }
+  ],
+  "inPartner": "in partnership with",
+  "navCta": "Start a free pilot",
+  "heroE": "VETTED WORKER · AN ELM SERVICE",
+  "h1a": "Know who you're hiring ",
+  "h1b": "before the visa",
   "h1c": ".",
-  "heroP": "Juan applies from Manila at 09:12 as a caregiver for Al Rawda Home Care in Riyadh. Asif applies from Lahore the same afternoon. Identity, police record, employers and a decision — all settled before the visa. Scroll to follow both.",
-  "cta1": "Request a free pilot",
+  "heroP": "Vetted Worker confirms every overseas hire's identity, police record, qualifications and work history with the authorities that issued them — so the wrong hire is stopped on day 4, not after arrival.",
+  "cta1": "Start a free pilot",
+  "cta2": "See how it works",
   "certT": "Certified",
   "mapRiyadh": "Riyadh",
   "mapLahore": "Lahore",
@@ -32,18 +169,6 @@ const en = {
     "Decision"
   ],
   "fict": "Fictitious workers. Real checks.",
-  "gapE": "WHY IT MATTERS",
-  "gapH": "The highest-volume roles are the least checked.",
-  "gap": [
-    {
-      "h": "Documents that aren't what they seem",
-      "b": "Borrowed identities, forged police certificates and bought trade certificates move through recruitment chains."
-    },
-    {
-      "h": "Claims nobody has confirmed",
-      "b": "Past employers and years of experience are usually taken on the worker's or the agent's word."
-    }
-  ],
   "c1l": "INVITE",
   "c1t": "Day 1 · 09:12",
   "c1a": "Five minutes on ",
@@ -202,8 +327,14 @@ const en = {
   ],
   "srcE": "CREDIBILITY OF THE DATA SOURCES",
   "srcH": "Where the evidence comes from.",
-  "srcP": "Every line in a Worker Trust Report traces back to a named authority, registry or accredited programme — and says how it was checked.",
+  "srcP": "Every line in a Worker Trust Report traces back to a named authority, registry or accredited programme and says how it was checked.",
   "srcPanelSub": "3 authorities",
+  "srcS1": "issuing authorities",
+  "srcS2": "source countries",
+  "srcS3": "of results name their source",
+  "mDigD": " · direct registry link",
+  "mAuthD": " · confirmed by issuer",
+  "mConfD": " · verified by accredited partner",
   "srcFoot": "Where a record isn't online, accredited local partners verify it on the ground, and the report says so.",
   "countries": [
     "Saudi Arabia",
@@ -331,8 +462,8 @@ const en = {
       "b": "Saudi PDPL aligned, on a platform certified to SOC 2 Type II, ISO 27001 and ISO 27018."
     }
   ],
-  "pilotE": "PROOF OF CONCEPT",
-  "pilotH": "Confirm your pilot.",
+  "pilotE": "",
+  "pilotH": "See it on your next 20 hires.",
   "pilotP": "Free of charge, no obligation to buy, and live within five working days of sign-off.",
   "provH": "You provide",
   "provB": "Up to 20 workers from your next intake from the Philippines or India, each of whom agrees to be checked. A named contact in your recruitment team or agency.",
@@ -442,11 +573,11 @@ const en = {
       ]
     }
   ],
-  "copy": "©2026 Youverify. All rights reserved.",
-  "partner": "Verified Worker is delivered by Elm and Youverify.",
+  "copy": "©2026 Elm. All rights reserved.",
+  "partner": "Vetted Worker by Elm, in partnership with Youverify.",
   "mailFallback": "Email app didn't open?",
   "mailFallbackLink": "Send it to vw@youverify.co",
-  "mailSubject": "Verified Worker pilot request · {company}",
+  "mailSubject": "Vetted Worker pilot request · {company}",
   "f_sending": "Opening your email app…",
   "langLabel": "Language"
 }
@@ -454,13 +585,150 @@ const en = {
 export type Copy = typeof en
 
 const ar: Copy = {
-  "navCta": "اطلب تجربة",
-  "heroE": "علم × يوفيرايفاي · Verified Worker",
-  "h1a": "لكل عامل ",
-  "h1b": "قصة",
+  "proof": [
+    {
+      "v": "5 دقائق",
+      "l": "من وقت العامل، على هاتفه"
+    },
+    {
+      "v": "ثوانٍ",
+      "l": "للهوية وقوائم المراقبة"
+    },
+    {
+      "v": "5–10 أيام",
+      "l": "لتقرير كامل من المصادر"
+    },
+    {
+      "v": "18",
+      "l": "جهة مُصدِرة في 6 دول"
+    }
+  ],
+  "valE": "ما تحصل عليه",
+  "valH": "توظيف خاطئ أقل. استقدام أسرع. قرارات يمكنك الدفاع عنها.",
+  "val": [
+    {
+      "k": "01",
+      "h": "أوقف التوظيف الخاطئ مبكرًا",
+      "b": "تُكتشف الشهادات المزوّرة والهويات المستعارة قبل دفع رسوم الاستقدام والتأشيرة والطيران."
+    },
+    {
+      "k": "02",
+      "h": "استقدم العمال الجيدين أسرع",
+      "b": "الملفات السليمة تنتقل مباشرة إلى التأشيرة. دون ملاحقة مستندات أو انتظار وكلاء."
+    },
+    {
+      "k": "03",
+      "h": "دافع عن كل قرار",
+      "b": "كل نتيجة تحمل مصدرها وطريقتها وسجل الموافقة — جاهزة لمدقق أو عميل أو نزاع."
+    }
+  ],
+  "calcE": "تكلفة الخطأ",
+  "calcH": "ما يكلّفك التوظيف الخاطئ كل عام.",
+  "calcP": "كل استقدام فاشل يُدفع ثمنه مرتين: رسوم الاستقدام والتأشيرة والطيران، ثم البديل والأسابيع التي تبقى فيها الوظيفة شاغرة.",
+  "calcHires": "عدد العمال المستقدمين سنويًا",
+  "calcCost": "تكلفة الاستقدام للعامل (ريال)",
+  "calcRate": "نسبة الاستقدام الفاشل (%)",
+  "calcEx": "أرقام توضيحية. أدخل أرقامك.",
+  "calcOutL": "يُنفق على التوظيف الخاطئ سنويًا",
+  "calcSub": "{n} استقدام فاشل × {c} ريال",
+  "calcNote": "يعمل Vetted Worker قبل الالتزام بأي من هذه المبالغ. وتُظهر التجربة المجانية ما يكتشفه في دفعتك القادمة.",
+  "calcCta": "جرّبه على دفعتي القادمة",
+  "howE": "كيف يعمل",
+  "howH": "متقدّمان. تسعة أيام. إجابة واضحة.",
+  "howP": "رابط واحد إلى هاتف العامل. كل ادعاء يُتحقق منه مع الجهة التي أصدرته. وقرار واضح لفريقك — قبل إنفاق ريال واحد على التأشيرات أو الطيران.",
+  "howSteps": [
+    {
+      "d": "اليوم 1",
+      "n": "الدعوة",
+      "href": "#invite"
+    },
+    {
+      "d": "اليوم 1",
+      "n": "الهوية",
+      "href": "#identity"
+    },
+    {
+      "d": "الأيام 2–7",
+      "n": "المصدر",
+      "href": "#source"
+    },
+    {
+      "d": "اليوم 9",
+      "n": "السجل",
+      "href": "#history"
+    },
+    {
+      "d": "اليوم 4 · 9",
+      "n": "القرار",
+      "href": "#decision"
+    }
+  ],
+  "howAsifR": "لاهور · كهربائي. أُوقف قبل التأشيرة — دون خسارة أي رسوم.",
+  "howJuanR": "مانيلا · مقدّم رعاية. سليم، مع سؤال واحد للمقابلة.",
+  "audE": "لمن هذه الخدمة",
+  "audH": "لكل من يتحمّل مسؤولية التوظيف.",
+  "aud": [
+    {
+      "h": "أصحاب العمل",
+      "b": "وظّف بثقة وخفّض تكلفة البدائل والحوادث وفشل فترة التجربة.",
+      "pts": [
+        "التقرير قبل إصدار التأشيرة",
+        "لوحة تحكم أو ربط مع نظام الموارد البشرية",
+        "تقارير بالعربية والإنجليزية"
+      ]
+    },
+    {
+      "h": "مكاتب الاستقدام",
+      "b": "قدّم مرشحين موثَّقين واكسب العقود بالدليل لا بالوعود.",
+      "pts": [
+        "تقرير موثَّق لكل عميل",
+        "رفض أقل عند الاستقدام",
+        "تميّز في كل منافسة"
+      ]
+    },
+    {
+      "h": "الرعاية المنزلية والعمالة المنزلية",
+      "b": "اعرف بالضبط من سيدخل منزل الأسرة قبل وصوله.",
+      "pts": [
+        "السجل الجنائي من المصدر",
+        "الهوية ومطابقة الوجه الحيّة",
+        "تأكيد أصحاب العمل السابقين"
+      ]
+    }
+  ],
+  "faqE": "قبل أن تبدأ",
+  "faqH": "أسئلة يطرحها العملاء.",
+  "faq": [
+    {
+      "q": "هل يدفع العامل أي شيء؟",
+      "a": "لا. يستخدم العامل رابطًا آمنًا ومجانيًا على هاتفه، ويرى ما سيُفحص قبل أن يوافق."
+    },
+    {
+      "q": "ما سرعة النتائج؟",
+      "a": "الهوية ومطابقة الوجه وقوائم المراقبة خلال ثوانٍ. والتحقق مع الشرطة والجهات التعليمية وأصحاب العمل خلال 5–10 أيام عمل."
+    },
+    {
+      "q": "هل الخدمة متوافقة مع الأنظمة السعودية؟",
+      "a": "نعم. كل فحص يتطلب موافقة العامل وفق نظام حماية البيانات الشخصية، على منصة حاصلة على SOC 2 Type II وISO 27001 وISO 27018."
+    },
+    {
+      "q": "ماذا لو لم يكن السجل متاحًا إلكترونيًا؟",
+      "a": "يتحقق منه شركاء محليون معتمدون مع الجهة المُصدِرة ميدانيًا، ويذكر التقرير طريقة التحقق بدقة."
+    },
+    {
+      "q": "كيف تتكامل مع أنظمتنا؟",
+      "a": "ابدأ من لوحة التحكم من اليوم الأول، أو اربطها عبر واجهة برمجية بنظام الموارد البشرية أو الاستقدام."
+    }
+  ],
+  "inPartner": "بالشراكة مع",
+  "navCta": "ابدأ تجربة مجانية",
+  "heroE": "Vetted Worker · خدمة من علم",
+  "h1a": "اعرف من توظّف ",
+  "h1b": "قبل التأشيرة",
   "h1c": ".",
-  "heroP": "يتقدّم خوان من مانيلا الساعة 09:12 للعمل مقدّم رعاية لدى الروضة للرعاية المنزلية في الرياض. ويتقدّم آصف من لاهور بعد الظهر. الهوية والسجل الجنائي وأصحاب العمل والقرار — كل ذلك يُحسم قبل التأشيرة. مرّر لتتابع القصتين.",
-  "cta1": "اطلب تجربة مجانية",
+  "heroP": "يؤكد Vetted Worker هوية كل عامل مستقدم وسجله الجنائي ومؤهلاته وتاريخه الوظيفي مع الجهات التي أصدرتها — ليُوقف التوظيف الخاطئ في اليوم الرابع، لا بعد الوصول.",
+  "cta1": "ابدأ تجربة مجانية",
+  "cta2": "كيف يعمل",
   "certT": "معتمد",
   "mapRiyadh": "الرياض",
   "mapLahore": "لاهور",
@@ -480,18 +748,6 @@ const ar: Copy = {
     "القرار"
   ],
   "fict": "عمال افتراضيون. فحوصات حقيقية.",
-  "gapE": "لماذا يهم ذلك",
-  "gapH": "الوظائف الأعلى عددًا هي الأقل تحققًا.",
-  "gap": [
-    {
-      "h": "مستندات ليست كما تبدو",
-      "b": "هويات مستعارة وشهادات حسن سيرة مزوّرة وشهادات مهنية مشتراة تمر عبر سلاسل الاستقدام."
-    },
-    {
-      "h": "ادعاءات لم يؤكدها أحد",
-      "b": "أصحاب العمل السابقون وسنوات الخبرة تُؤخذ عادةً بكلمة العامل أو الوكيل."
-    }
-  ],
   "c1l": "الدعوة",
   "c1t": "اليوم 1 · 09:12",
   "c1a": "خمس دقائق على ",
@@ -652,6 +908,12 @@ const ar: Copy = {
   "srcH": "من أين تأتي الأدلة.",
   "srcP": "كل سطر في تقرير موثوقية العامل يعود إلى جهة أو سجل أو برنامج معتمد محدد — ويوضح طريقة التحقق.",
   "srcPanelSub": "3 جهات",
+  "srcS1": "جهة مُصدِرة",
+  "srcS2": "دول المصدر",
+  "srcS3": "من النتائج تذكر مصدرها",
+  "mDigD": " · ربط مباشر بالسجل",
+  "mAuthD": " · مؤكَّد من الجهة المُصدِرة",
+  "mConfD": " · تحقق عبر شريك معتمد",
   "srcFoot": "حين لا يكون السجل متاحًا إلكترونيًا، يتحقق منه شركاء محليون معتمدون ميدانيًا، ويذكر التقرير ذلك.",
   "countries": [
     "المملكة العربية السعودية",
@@ -779,8 +1041,8 @@ const ar: Copy = {
       "b": "متوافق مع نظام حماية البيانات الشخصية، على منصة حاصلة على SOC 2 Type II وISO 27001 وISO 27018."
     }
   ],
-  "pilotE": "إثبات المفهوم",
-  "pilotH": "أكّد تجربتك.",
+  "pilotE": "تجربة مجانية",
+  "pilotH": "جرّبه على أول 20 عاملًا في دفعتك القادمة. مجانًا.",
   "pilotP": "مجانًا، دون أي التزام بالشراء، وتبدأ خلال خمسة أيام عمل من الموافقة.",
   "provH": "ما تقدّمه",
   "provB": "ما يصل إلى 20 عاملًا من دفعتك القادمة من الفلبين أو الهند، يوافق كل منهم على الفحص. ومسؤول تواصل محدد في فريق الاستقدام أو الوكالة.",
@@ -890,11 +1152,11 @@ const ar: Copy = {
       ]
     }
   ],
-  "copy": "©2026 يوفيرايفاي. جميع الحقوق محفوظة.",
-  "partner": "يُقدَّم Verified Worker من علم ويوفيرايفاي.",
+  "copy": "©2026 علم. جميع الحقوق محفوظة.",
+  "partner": "Vetted Worker من علم، بالشراكة مع يوفيرايفاي.",
   "mailFallback": "لم يُفتح تطبيق البريد؟",
   "mailFallbackLink": "أرسله إلى vw@youverify.co",
-  "mailSubject": "طلب تجربة Verified Worker · {company}",
+  "mailSubject": "طلب تجربة Vetted Worker · {company}",
   "f_sending": "جارٍ فتح تطبيق البريد…",
   "langLabel": "اللغة"
 }

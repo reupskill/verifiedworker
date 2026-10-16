@@ -11,15 +11,18 @@ onMounted(restoreLang)
     <SiteHeader />
     <main>
       <HeroSection />
-      <GapSection />
+      <ValueSection />
+      <CostCalculator />
+      <HowSection />
       <ChapterInvite />
       <ChapterIdentity />
       <ChapterSource />
       <ChapterHistory />
       <ChapterDecision />
+      <AudienceSection />
       <LevelsSection />
       <SourcesSection />
-      <TrustStrip />
+      <FaqSection />
       <PilotSection />
     </main>
     <SiteFooter />

@@ -13,7 +13,7 @@ const { t } = useLang()
         <div class="screen">
           <div class="top">
             <div class="clock">09:12</div>
-            <div class="app">Verified Worker</div>
+            <div class="app">Vetted Worker</div>
             <div class="msg">{{ t.c1msg }}</div>
           </div>
           <div class="steps">

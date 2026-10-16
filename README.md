@@ -1,6 +1,6 @@
-# Verified Worker landing page
+# Vetted Worker landing page
 
-Nuxt 4 build of the Claude Design file `project/Verified Worker Landing v2.dc.html`: a bilingual (EN / العربية) landing page for Verified Worker by Elm × Youverify.
+Nuxt 4 build of the Claude Design file `Verified Worker Landing v3.dc.html`: a bilingual (EN / العربية) landing page for Vetted Worker, an Elm service in partnership with Youverify.
 
 ## Run
 
@@ -16,7 +16,7 @@ npm run typecheck
 - `app/app.vue`: page order, plus the `<html lang dir>` binding
 - `app/i18n/copy.ts`: all EN and AR copy in one typed object (the `Copy` type keeps both languages in step)
 - `app/composables/useLang.ts`: current language; `?lang=ar|en` takes priority, then the choice remembered in localStorage
-- `app/components/`: one component per section (Hero, Gap, Chapter 01–05, Levels, Sources, Trust, Pilot, Footer) plus the shared `ChapterIntro` and `WorkerCard`
+- `app/components/`: one component per section, in page order: Hero, Value, CostCalculator, How, Chapter 01–05, Audience, Levels, Sources, Faq, Pilot, Footer. `ChapterIntro` and `WorkerCard` are shared pieces
 - `app/assets/css/main.css`: BR Sonoma `@font-face`, the design-system colour tokens and shared primitives
 - `public/`: logos, authority logos, hero illustration and BR Sonoma font files
 
