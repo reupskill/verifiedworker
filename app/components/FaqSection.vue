@@ -1,57 +1,19 @@
-<script setup lang="ts">
-const { t } = useLang()
-
-// First question open by default; one open at a time.
-const open = ref(0)
-const toggle = (i: number) => { open.value = open.value === i ? -1 : i }
-</script>
-
+<!--
+  Static markup from the vetted-worker-site handoff. Behaviour (language switch,
+  animations, tabs, calculator, form) is wired up by app/site/init.js.
+-->
 <template>
-  <section id="faq" class="faq">
-    <div class="wrap grid">
-      <div>
-        <h2 class="h2 big">{{ t.faqH }}</h2>
-        <div class="trust">
-          <div v-for="tr in t.trust" :key="tr.h" class="tr">
-            <div class="mark" aria-hidden="true" />
-            <div>
-              <div class="tr-h">{{ tr.h }}</div>
-              <div class="tr-b">{{ tr.b }}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="list">
-        <div v-for="(q, i) in t.faq" :key="i" class="qa">
-          <h3>
-            <button
-              :id="`faq-q-${i}`" type="button" class="q"
-              :aria-expanded="open === i" :aria-controls="`faq-a-${i}`" @click="toggle(i)"
-            >
-              <span>{{ q.q }}</span>
-              <span class="sign" aria-hidden="true">{{ open === i ? '−' : '+' }}</span>
-            </button>
-          </h3>
-          <div v-show="open === i" :id="`faq-a-${i}`" class="a" role="region" :aria-labelledby="`faq-q-${i}`">{{ q.a }}</div>
-        </div>
+<section class="sec mist" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="faq rv" id="faq">
+      <h3 id="faq-h" data-i18n="faq_h">Things people usually ask us.</h3>
+      <div class="faq-list">
+        <details open><summary><span data-i18n="q1">How fast are results?</span><i aria-hidden="true"></i></summary><p data-i18n="a1">Identity, face match and watchlists come back in seconds. Checks with police, schools and employers take 5–10 working days.</p></details>
+        <details><summary><span data-i18n="q2">Is it compliant with Saudi law?</span><i aria-hidden="true"></i></summary><p data-i18n="a2">Every check needs the worker's consent and is handled in line with the Personal Data Protection Law, on a platform certified to ISO 27001, ISO 27018 and ISO 42001 and independently examined under SOC 2 Type II.</p></details>
+        <details><summary><span data-i18n="q3">What if a record is not online?</span><i aria-hidden="true"></i></summary><p data-i18n="a3">Accredited local partners verify it with the issuer on the ground, and the report says exactly how it was checked.</p></details>
+        <details><summary><span data-i18n="q4">How does it fit our systems?</span><i aria-hidden="true"></i></summary><p data-i18n="a4">Start in the dashboard on day one, or connect by API to your HR or recruitment system.</p></details>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 </template>
-
-<style scoped>
-.faq { border-top: 1px solid var(--border); }
-.grid { padding-top: 44px; padding-bottom: 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 48px; align-items: start; }
-.trust { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
-.tr { display: flex; gap: 12px; align-items: flex-start; }
-.mark { width: 28px; height: 28px; border-radius: 7px; background: var(--indigo); background-image: linear-gradient(135deg, var(--purple), var(--cyan)); flex-shrink: 0; }
-.tr-h { font-size: 14.5px; font-weight: 700; color: var(--navy); }
-.tr-b { font-size: 13.5px; color: var(--muted); margin-top: 4px; line-height: 1.55; }
-.list { display: flex; flex-direction: column; }
-.qa { border-bottom: 1px solid var(--border); }
-h3 { margin: 0; }
-.q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; cursor: pointer; background: none; border: 0; text-align: start; font-size: 16px; font-weight: 700; color: var(--navy); }
-.q:hover { color: var(--indigo); }
-.sign { font-size: 20px; font-weight: 600; color: var(--cyan); line-height: 1; flex-shrink: 0; }
-.a { font-size: 14.5px; color: var(--ink-2); line-height: 1.7; padding: 0 0 20px; max-width: 560px; }
-</style>

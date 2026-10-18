@@ -1,35 +1,42 @@
 <script setup lang="ts">
-const { lang, dir, restoreLang } = useLang()
+import { initSite } from '~/site/init.js'
 
-useHead({ htmlAttrs: { lang, dir } })
+// init.js switches the page language; mirror it into the head so Nuxt's head
+// manager doesn't put lang/dir/title back to English after it renders.
+const lang = ref<'en' | 'ar'>('en')
+useHead({
+  htmlAttrs: {
+    lang: () => (lang.value === 'ar' ? 'ar' : 'en-GB'),
+    dir: () => (lang.value === 'ar' ? 'rtl' : 'ltr'),
+  },
+  title: () => (lang.value === 'ar' ? 'Vetted Worker من علم' : 'Vetted Worker by Elm'),
+})
 
-onMounted(restoreLang)
+const onLang = (e: Event) => { lang.value = (e as CustomEvent<'en' | 'ar'>).detail }
+
+// The page is static markup; init.js wires up its behaviour once after hydration.
+onMounted(() => {
+  document.addEventListener('vw:lang', onLang)
+  initSite()
+})
+onBeforeUnmount(() => document.removeEventListener('vw:lang', onLang))
 </script>
 
 <template>
-  <div class="page">
-    <SiteHeader />
-    <main>
-      <HeroSection />
-      <ValueSection />
-      <CostCalculator />
-      <HowSection />
-      <ChapterInvite />
-      <ChapterIdentity />
-      <ChapterSource />
-      <ChapterHistory />
-      <ChapterDecision />
-      <AudienceSection />
-      <LevelsSection />
-      <SourcesSection />
-      <ElmSection />
-      <FaqSection />
-      <PilotSection />
-    </main>
-    <SiteFooter />
-  </div>
+  <SvgSprite />
+  <SiteHeader />
+  <main id="top">
+    <HeroSection />
+    <ValueSection />
+    <HowSection />
+    <ReportSection />
+    <WhoSection />
+    <LevelsSection />
+    <CostSection />
+    <CoverageSection />
+    <ElmSection />
+    <FaqSection />
+    <PilotSection />
+  </main>
+  <SiteFooter />
 </template>
-
-<style scoped>
-.page { min-height: 100vh; background: #FFFFFF; color: var(--ink); }
-</style>
