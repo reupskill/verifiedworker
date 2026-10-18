@@ -33,19 +33,19 @@ const { t } = useLang()
 </template>
 
 <style scoped>
-.chapter { padding-top: 56px; padding-bottom: 56px; }
-.mock { border-radius: 20px; box-shadow: 0 12px 36px rgba(17, 87, 102, 0.08); overflow: hidden; }
-.title { padding: 14px 18px; border-bottom: 1px solid var(--border); font-size: 14px; font-weight: 800; color: var(--deep-ink); }
+.chapter { padding-top: 40px; padding-bottom: 40px; }
+.mock { border-radius: 20px; box-shadow: 0 12px 36px rgba(27, 27, 75, 0.08); overflow: hidden; }
+.title { padding: 14px 18px; border-bottom: 1px solid var(--border); font-size: 14px; font-weight: 600; color: var(--navy); }
 .cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 .col { padding: 16px 18px; }
 .col:first-child { border-inline-end: 1px solid var(--border); }
 .col--conf { background: #FFF8F0; }
 .k { font-size: 11px; font-weight: 700; letter-spacing: var(--ls); color: var(--faint); }
-.v { font-size: 24px; font-weight: 800; color: var(--deep-ink); margin-top: 8px; }
+.v { font-size: 24px; font-weight: 600; color: var(--navy); margin-top: 8px; }
 .s { font-size: 12.5px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
 .col--conf .k, .col--conf .v { color: #B85C00; }
 .col--conf .s { color: #7A4A14; }
 .foot { padding: 13px 18px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 12px; align-items: center; }
-.gulf-n { font-size: 13px; font-weight: 700; color: var(--deep-ink); }
+.gulf-n { font-size: 13px; font-weight: 700; color: var(--navy); }
 .gulf-r { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
 </style>

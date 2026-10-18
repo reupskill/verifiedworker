@@ -22,6 +22,7 @@ onMounted(restoreLang)
       <AudienceSection />
       <LevelsSection />
       <SourcesSection />
+      <ElmSection />
       <FaqSection />
       <PilotSection />
     </main>

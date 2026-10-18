@@ -21,7 +21,6 @@ const sub = computed(() => t.value.calcSub.replace('{n}', fmt(failed.value)).rep
   <section id="cost" class="wrap cost">
     <div class="box">
       <div>
-        <div class="eyebrow">{{ t.calcE }}</div>
         <h2 class="h2 big">{{ t.calcH }}</h2>
         <p class="lede p">{{ t.calcP }}</p>
         <div class="fields">
@@ -53,25 +52,25 @@ const sub = computed(() => t.value.calcSub.replace('{n}', fmt(failed.value)).rep
 </template>
 
 <style scoped>
-.cost { padding-top: 40px; padding-bottom: 88px; }
-.box { background: var(--teal-50); border: 1px solid var(--teal-100); border-radius: 28px; padding: clamp(24px, 4vw, 44px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 36px; align-items: center; }
+.cost { padding-top: 16px; padding-bottom: 44px; }
+.box { background: var(--lav-50); border: 1px solid var(--lav-100); border-radius: 28px; padding: clamp(24px, 4vw, 44px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 36px; align-items: center; }
 .p { max-width: 460px; }
 .fields { display: flex; flex-direction: column; gap: 14px; margin-top: 26px; max-width: 420px; }
 .field { display: grid; grid-template-columns: minmax(0, 1fr) 130px; gap: 12px; align-items: center; }
-.field span { font-size: 13.5px; font-weight: 700; color: var(--deep-ink); }
+.field span { font-size: 13.5px; font-weight: 700; color: var(--navy); }
 input { border: 1px solid var(--border-strong); border-radius: 10px; padding: 10px 12px; font-size: 14px; font-family: inherit; color: var(--ink); background: #FFFFFF; width: 100%; outline: none; min-height: 42px; }
-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(70, 178, 200, 0.2); }
+input:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(10, 166, 226, 0.2); }
 .ex { font-size: 12px; color: var(--ink-3); }
 
-.out { background: var(--deep-ink); background-image: radial-gradient(circle at 100% 0%, rgba(70, 178, 200, 0.25), rgba(70, 178, 200, 0) 55%); border-radius: 22px; padding: 30px; color: #FFFFFF; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 24px 60px rgba(11, 56, 66, 0.22); min-width: 0; }
-.out-l { color: var(--blue-light); }
-.total { font-size: clamp(36px, 4.4vw, 52px); font-weight: 800; letter-spacing: -0.025em; line-height: 1; unicode-bidi: isolate; overflow-wrap: anywhere; }
+.out { background: var(--navy-2); background-image: radial-gradient(circle at 100% 0%, rgba(10, 166, 226, 0.25), rgba(10, 166, 226, 0) 55%); border-radius: 22px; padding: 30px; color: #FFFFFF; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 24px 60px rgba(20, 20, 60, 0.22); min-width: 0; }
+.out-l { color: var(--cyan-light); }
+.total { font-size: clamp(36px, 4.4vw, 52px); font-weight: 600; letter-spacing: -0.025em; line-height: 1; unicode-bidi: isolate; overflow-wrap: anywhere; }
 html[dir="rtl"] .total { text-align: right; }
-.sub { font-size: 14px; color: var(--teal-200); }
+.sub { font-size: 14px; color: var(--lav-200); }
 .rule { height: 1px; background: rgba(255, 255, 255, 0.12); margin: 6px 0; }
-.note { font-size: 14.5px; color: var(--teal-100); line-height: 1.6; }
-.out-cta { align-self: flex-start; background: #FFFFFF; color: var(--deep-ink); border-radius: 10px; padding: 12px 18px; font-size: 14px; font-weight: 700; margin-top: 4px; }
-.out-cta:hover { color: var(--deep); background: var(--teal-50); }
+.note { font-size: 14.5px; color: var(--lav-100); line-height: 1.6; }
+.out-cta { align-self: flex-start; background: #FFFFFF; color: var(--navy); border-radius: 10px; padding: 12px 18px; font-size: 14px; font-weight: 700; margin-top: 4px; }
+.out-cta:hover { color: var(--indigo); background: var(--lav-50); }
 
 @media (max-width: 420px) {
   .field { grid-template-columns: minmax(0, 1fr) 110px; }

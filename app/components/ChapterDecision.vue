@@ -24,16 +24,16 @@ const outcomes = computed(() => [
 </template>
 
 <style scoped>
-.decision { padding-top: 72px; padding-bottom: 72px; }
+.decision { padding-top: 40px; padding-bottom: 40px; }
 .intro { max-width: 640px; }
 .intro :deep(.lede) { max-width: none; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; margin-top: 36px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; margin-top: 24px; }
 .out { border: 1px solid; border-radius: 20px; padding: 22px; }
 .out--stop { border-color: #F3C2BD; background: #FDF6F5; }
 .out--review { border-color: #FFD6AE; background: #FFFAF4; }
-.out--proceed { border-color: #A9E3D6; background: #F2FBF9; }
+.out--proceed { border-color: #BFE9E2; background: #F2FBF9; }
 .head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
-.name { font-size: 15px; font-weight: 800; color: var(--deep-ink); }
+.name { font-size: 15px; font-weight: 600; color: var(--navy); }
 .badge { padding: 4px 11px; }
 .body { font-size: 13.5px; margin-top: 12px; line-height: 1.6; }
 .out--stop .body { color: #8A2620; }

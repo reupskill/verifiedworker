@@ -1,99 +1,66 @@
 <script setup lang="ts">
-const { t } = useLang()
-
-const certs = ['SOC 2 Type II', 'ISO 27001', 'ISO 27018', 'ISO 42001', 'GDPR', 'PDPL']
-
-const DONE = '#21BFAF'
-const IDLE = '#E4E9EC'
-const ORANGE = '#FF993C'
-const RED = '#C2453D'
-// Juan: four stages clear, decision pending review.
-const juanBars = [DONE, DONE, DONE, DONE, ORANGE]
-// Asif: identity flagged, source failed, history never ran, stopped.
-const asifBars = [DONE, DONE, RED, IDLE, RED]
-
-const pins = computed(() => [
-  { label: t.value.mapRiyadh, left: '22%', top: '57%', dot: DONE },
-  { label: t.value.mapLahore, left: '50%', top: '33%', dot: RED },
-  { label: t.value.mapManila, left: '85.3%', top: '61.5%', dot: ORANGE },
-])
+const { t, lang } = useLang()
+const arrow = computed(() => (lang.value === 'ar' ? '←' : '→'))
 </script>
 
 <template>
   <section id="story" class="hero">
-    <div class="wrap grid">
+    <svg class="iso" aria-hidden="true">
+      <defs>
+        <pattern id="vwIso" width="34.64" height="20" patternUnits="userSpaceOnUse">
+          <path d="M0 0L34.64 20M0 20L34.64 0" stroke="#BFC9E6" stroke-opacity="0.09" stroke-width="1" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#vwIso)" />
+    </svg>
+    <div class="inner grid">
       <div>
-        <div class="eyebrow">{{ t.heroE }}</div>
+        <div class="hex-eyebrow">{{ t.heroE }}</div>
         <h1>{{ t.h1a }}<span class="hl">{{ t.h1b }}</span>{{ t.h1c }}</h1>
-        <p class="lede intro">{{ t.heroP }}</p>
+        <p class="intro">{{ t.heroP }}</p>
         <div class="ctas">
-          <a href="#pilot" class="btn cta">{{ t.cta1 }}</a>
-          <a href="#how" class="cta cta--ghost">{{ t.cta2 }}</a>
+          <a href="#pilot" class="cta-elm cta-elm--primary cut">{{ t.cta1 }}<span aria-hidden="true">{{ arrow }}</span></a>
+          <a href="#how" class="cta-elm cta-elm--ghost cut">{{ t.cta2 }}</a>
         </div>
-        <div class="proof">
-          <div v-for="p in t.proof" :key="p.v">
-            <div class="pv">{{ p.v }}</div>
-            <div class="pl">{{ p.l }}</div>
-          </div>
-        </div>
-        <div class="certs">
-          <span class="certs-t">{{ t.certT }}</span>
-          <span v-for="c in certs" :key="c" class="cert">{{ c }}</span>
-        </div>
+        <ul class="assure">
+          <li v-for="a in t.assure" :key="a">{{ a }}</li>
+        </ul>
       </div>
-
-      <div class="visual">
-        <div class="map" dir="ltr">
-          <img src="/assets/hero-corridors.svg" alt="" class="map-img">
-          <div v-for="p in pins" :key="p.left" class="pin" :style="{ left: p.left, top: p.top }">
-            <span class="dot" :style="{ background: p.dot }" />{{ p.label }}
-          </div>
+      <div class="visual"><HeroArt /></div>
+    </div>
+    <div class="proof-band">
+      <div class="inner proof">
+        <div v-for="p in t.proof" :key="p.v" class="stat">
+          <div class="pv">{{ p.v }}</div>
+          <div class="pl">{{ p.l }}</div>
         </div>
-        <WorkerCard
-          class="juan"
-          :name="t.juan" :meta="t.juanMeta" :badge="t.reviewD9" tone="review"
-          icon="/assets/icon-caregiver.svg" :bars="juanBars" :stages="t.bar"
-        />
-        <WorkerCard
-          class="asif"
-          :name="t.asif" :meta="t.asifMeta" :badge="t.stopD4" tone="stop"
-          icon="/assets/icon-electrician.svg" :bars="asifBars" :stages="t.bar"
-        />
-        <div class="fict">{{ t.fict }}</div>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-.hero { background: var(--teal-50); background-image: radial-gradient(circle at 88% 0%, rgba(70, 178, 200, 0.2), rgba(70, 178, 200, 0) 42%); }
-.grid { padding-top: 64px; padding-bottom: 72px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 56px; align-items: center; }
-h1 { margin: 16px 0 0; font-size: clamp(30px, 3.4vw, 44px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.08; color: var(--deep-ink); }
-.intro { margin-top: 16px; max-width: 500px; }
-.ctas { display: flex; gap: 10px; margin-top: 28px; flex-wrap: wrap; }
-.cta { border-radius: 10px; padding: 13px 20px; font-size: 14.5px; box-shadow: 0 6px 18px rgba(17, 87, 102, 0.22); }
-.cta--ghost { background: #FFFFFF; color: var(--deep); border: 1px solid var(--border-strong); padding: 12px 20px; font-weight: 700; box-shadow: none; }
-.cta--ghost:hover { color: var(--deep); border-color: var(--deep); }
-.proof { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 110px), 1fr)); gap: 18px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--teal-200); }
-.pv { font-size: 20px; font-weight: 800; color: var(--deep); line-height: 1; letter-spacing: -0.01em; }
-.pl { font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
-.certs { margin-top: 22px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.certs-t { font-size: 12px; font-weight: 700; color: var(--ink-3); }
-.cert { font-size: 11.5px; font-weight: 700; color: var(--deep); background: #FFFFFF; border: 1px solid var(--teal-200); padding: 4px 9px; border-radius: 7px; }
+.hero { position: relative; overflow: hidden; background: var(--navy); color: #FFFFFF; }
+.iso { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.inner { position: relative; max-width: 1200px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+.grid { padding-top: clamp(40px, 5vw, 64px); padding-bottom: clamp(32px, 4vw, 48px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 48px; align-items: center; }
+h1 { margin: 18px 0 0; font-size: clamp(38px, 5.6vw, 72px); font-weight: 400; letter-spacing: -0.02em; line-height: 1.04; color: #FFFFFF; text-wrap: balance; }
+h1 .hl { font-weight: 600; color: var(--peach); }
+.intro { font-size: clamp(16px, 1.4vw, 19px); color: var(--on-navy); line-height: 1.65; margin: 22px 0 0; max-width: 56ch; }
+.ctas { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+.assure { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 28px 0 0; font-size: 14px; color: var(--on-navy); }
+.assure li { display: inline-flex; align-items: center; gap: 8px; }
+.assure li::before { content: ""; width: 8px; height: 8px; background: var(--sky); transform: rotate(45deg); }
+.visual { position: relative; }
 
-.visual { display: flex; flex-direction: column; gap: 14px; }
-.map { position: relative; width: 100%; height: 400px; border-radius: 24px; overflow: hidden; box-shadow: 0 24px 60px rgba(11, 56, 66, 0.25); }
-.map-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-.pin { position: absolute; transform: translate(-50%, -150%); display: flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.95); border-radius: 999px; padding: 4px 10px 4px 8px; font-size: 11.5px; font-weight: 700; color: var(--deep-ink); white-space: nowrap; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); }
-.dot { width: 7px; height: 7px; border-radius: 50%; }
-.juan { box-shadow: 0 20px 60px rgba(17, 87, 102, 0.12); margin: -110px 24px 0; }
-.asif { box-shadow: 0 20px 60px rgba(17, 87, 102, 0.08); margin-inline-start: 60px; margin-inline-end: 24px; }
-.fict { font-size: 12px; color: var(--ink-3); margin-inline-start: 36px; }
+.proof-band { position: relative; border-top: 1px solid rgba(191, 201, 230, 0.18); }
+.proof { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
+.stat { padding: 26px 20px 28px; border-inline-start: 1px solid rgba(191, 201, 230, 0.18); display: flex; flex-direction: column; gap: 6px; }
+.pv { font-size: clamp(26px, 2.6vw, 34px); font-weight: 500; line-height: 1.1; color: #FFFFFF; font-variant-numeric: tabular-nums; }
+.pl { font-size: 14px; color: var(--on-navy-2); line-height: 1.45; }
 
-@media (max-width: 520px) {
-  .map { height: 300px; }
-  .juan { margin: -90px 8px 0; }
-  .asif { margin-inline-start: 24px; margin-inline-end: 8px; }
-  .fict { margin-inline-start: 12px; }
+@media (max-width: 480px) {
+  .proof { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat { padding: 20px 14px 22px; }
 }
 </style>

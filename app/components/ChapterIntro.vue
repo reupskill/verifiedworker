@@ -36,12 +36,12 @@ withDefaults(defineProps<{
 
 <style scoped>
 .kicker { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-.num { font-size: 13px; font-weight: 800; color: var(--blue); }
-.tag { font-size: 11.5px; font-weight: 600; color: var(--muted); background: var(--teal-50); border-radius: 999px; padding: 3px 10px; }
+.num { font-size: 13px; font-weight: 600; color: var(--cyan); }
+.tag { font-size: 11.5px; font-weight: 600; color: var(--muted); background: var(--lav-50); border-radius: 999px; padding: 3px 10px; }
 .tag--alt { background: #FFFFFF; border: 1px solid var(--border); }
 .h2 { margin-top: 14px; }
 .lede { max-width: 500px; }
 .stats { display: flex; gap: 36px; margin-top: 24px; }
-.v { font-size: 22px; font-weight: 800; color: var(--deep); line-height: 1; }
+.v { font-size: 22px; font-weight: 600; color: var(--indigo); line-height: 1; }
 .l { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
 </style>

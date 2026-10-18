@@ -4,6 +4,7 @@
 const TO = 'vw@youverify.co'
 
 const { t, lang } = useLang()
+const arrow = computed(() => (lang.value === 'ar' ? '←' : '→'))
 
 const blank = () => ({ company: '', name: '', role: '', email: '', mobile: '', count: '20', start: '' })
 const form = reactive(blank())
@@ -77,9 +78,9 @@ const okBody = computed(() =>
 </script>
 
 <template>
-  <div class="card shell">
+  <div class="shell cut">
     <form v-if="!sent" class="form" novalidate @submit.prevent="submit">
-      <div>
+      <div class="head">
         <div class="fh">{{ t.formH }}</div>
         <div class="fs">{{ t.formS }}</div>
       </div>
@@ -141,7 +142,7 @@ const okBody = computed(() =>
         <span class="agree-t">{{ t.f_agree }}</span>
       </label>
       <div v-if="error" class="err" role="alert">{{ t[error] }}</div>
-      <button type="submit" class="btn submit">{{ t.f_submit }}</button>
+      <button type="submit" class="cta-elm cta-elm--primary cut submit">{{ t.f_submit }}<span aria-hidden="true">{{ arrow }}</span></button>
       <div class="privacy">{{ t.f_privacy }}</div>
     </form>
 
@@ -156,39 +157,42 @@ const okBody = computed(() =>
 </template>
 
 <style scoped>
-.shell { border-radius: 20px; box-shadow: 0 20px 60px rgba(17, 87, 102, 0.10); padding: 26px; }
+.shell { background: #FFFFFF; color: var(--navy); padding: clamp(24px, 3vw, 36px); --cut: 28px; }
 .form { display: flex; flex-direction: column; gap: 16px; }
-.fh { font-size: 18px; font-weight: 800; color: var(--deep-ink); }
-.fs { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.fh { font-size: 22px; font-weight: 600; color: var(--navy); }
+.fs { font-size: 13.5px; color: var(--slate-blue); }
 .field { display: flex; flex-direction: column; gap: 6px; border: 0; margin: 0; padding: 0; min-width: 0; }
 fieldset.field { gap: 8px; }
-.lbl { font-size: 12.5px; font-weight: 700; color: var(--deep-ink); padding: 0; }
+.lbl { font-size: 13.5px; font-weight: 500; color: var(--slate-blue-2); padding: 0; }
 fieldset .lbl { margin-bottom: 8px; }
 .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 14px; }
 input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="date"] {
-  border: 1px solid var(--border-strong); border-radius: 10px; padding: 10px 12px; font-size: 14px; font-family: inherit; color: var(--ink); background: #FFFFFF; width: 100%; outline: none; min-height: 42px;
+  border: 1px solid var(--on-navy); border-radius: 0; padding: 12px 14px; font-size: 15px; font-family: inherit; color: var(--ink); background: #FFFFFF; width: 100%; outline: none; min-height: 48px;
 }
-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(70, 178, 200, 0.2); }
+input:focus { border-color: var(--violet); box-shadow: 0 0 0 3px rgba(110, 67, 181, 0.18); }
 html[dir="rtl"] input[dir="ltr"] { text-align: right; }
 .chips { display: flex; gap: 8px; flex-wrap: wrap; }
-.chip { padding: 7px 12px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid var(--border-strong); background: #FFFFFF; color: var(--ink-2); }
-.chip.on { border-color: var(--deep); background: var(--deep); color: #FFFFFF; }
+/* Chips clip only the bottom-right corner. */
+.chip { padding: 10px 18px; font-size: 14.5px; font-weight: 500; cursor: pointer; border: 1px solid var(--on-navy); background: #FFFFFF; color: var(--navy); clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%); }
+.chip:hover { border-color: var(--navy); }
+.chip.on { border-color: var(--navy); background: var(--navy); color: #FFFFFF; }
 .agree { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; position: relative; }
 .sr { position: absolute; opacity: 0; width: 1px; height: 1px; }
-.box { width: 18px; height: 18px; border-radius: 5px; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; color: #FFFFFF; border: 1.5px solid var(--border-strong); background: #FFFFFF; }
-.box.on { border-color: var(--deep); background: var(--deep); }
-.sr:focus-visible + .box { outline: 2px solid var(--blue); outline-offset: 2px; }
+.box { width: 18px; height: 18px; border-radius: 5px; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #FFFFFF; border: 1.5px solid var(--border-strong); background: #FFFFFF; }
+.box.on { border-color: var(--indigo); background: var(--indigo); }
+.sr:focus-visible + .box { outline: 2px solid var(--cyan); outline-offset: 2px; }
 .agree-t { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
 .err { font-size: 12.5px; font-weight: 600; color: #B0322A; background: #FDECEA; border-radius: 9px; padding: 9px 12px; }
-.submit { border-radius: 10px; padding: 13px 18px; font-size: 14.5px; text-align: center; box-shadow: 0 6px 18px rgba(17, 87, 102, 0.22); }
+.submit { min-height: 52px; font-size: 16px; width: 100%; --cut: 14px; }
 .privacy { font-size: 11.5px; color: var(--ink-3); line-height: 1.55; }
 
 .done { padding: 24px 4px; display: flex; flex-direction: column; gap: 12px; }
-.ok { width: 44px; height: 44px; border-radius: 50%; background: var(--mint); color: #FFFFFF; font-size: 22px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
-.ok-h { font-size: 20px; font-weight: 800; color: var(--deep-ink); }
+.ok { width: 44px; height: 44px; border-radius: 50%; background: var(--mint); color: #FFFFFF; font-size: 22px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+.ok-h { font-size: 20px; font-weight: 600; color: var(--navy); }
 .ok-b { font-size: 14.5px; color: var(--ink-2); line-height: 1.65; }
 .fallback { font-size: 13px; color: var(--muted); }
 .fallback a { font-weight: 700; }
-.again { align-self: flex-start; font-size: 13.5px; font-weight: 700; color: var(--deep); cursor: pointer; background: none; border: 0; padding: 0; }
-.again:hover { color: var(--seaweed); }
+.again { align-self: flex-start; font-size: 13.5px; font-weight: 700; color: var(--indigo); cursor: pointer; background: none; border: 0; padding: 0; }
+.again:hover { color: var(--purple); }
 </style>

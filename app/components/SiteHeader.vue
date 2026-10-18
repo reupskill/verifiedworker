@@ -8,10 +8,7 @@ const { lang, t, setLang } = useLang()
       <a href="#story" class="brands" aria-label="Vetted Worker">
         <img src="/assets/elm-logo.avif" alt="Elm" class="elm">
         <span class="sep" aria-hidden="true" />
-        <span class="lockup">
-          <span class="name">Vetted Worker</span>
-          <span class="partner">{{ t.inPartner }} <img src="/assets/youverify-logo-tight.svg" alt="Youverify" class="yv"></span>
-        </span>
+        <span class="name">Vetted Worker</span>
       </a>
       <div class="actions">
         <div class="seg" role="group" aria-label="Language">
@@ -30,27 +27,20 @@ const { lang, t, setLang } = useLang()
 .brands { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
 .elm { height: 34px; display: block; }
 .sep { width: 1px; height: 28px; background: var(--border-strong); }
-.lockup { display: flex; flex-direction: column; gap: 3px; }
-.name { font-size: 17px; font-weight: 800; letter-spacing: -0.01em; color: var(--deep-ink); line-height: 1; white-space: nowrap; }
-.partner { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; color: var(--ink-3); line-height: 1; white-space: nowrap; }
-.yv { height: 16px; display: block; }
+.name { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; color: var(--navy); line-height: 1; white-space: nowrap; }
 .actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-.seg { display: flex; background: var(--teal-50); border: 1px solid var(--border); border-radius: 999px; padding: 3px; }
+.seg { display: flex; background: var(--lav-50); border: 1px solid var(--border); border-radius: 999px; padding: 3px; }
 .seg button { padding: 5px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 700; cursor: pointer; border: 0; background: transparent; color: var(--muted); }
-.seg button.on { background: var(--deep); color: #FFFFFF; }
+.seg button.on { background: var(--indigo); color: #FFFFFF; }
 .cta { border-radius: 9px; padding: 9px 14px; font-size: 13.5px; }
 
-/* Phones: the lockup and actions can't both fit, so the nav CTA goes (the hero has the same button). */
-@media (max-width: 560px) {
+/* Phones: the nav CTA goes (the hero has the same button right below). */
+@media (max-width: 520px) {
   .row { gap: 10px; }
   .elm { height: 28px; }
   .sep { height: 24px; }
   .brands { gap: 9px; }
   .name { font-size: 15px; }
   .cta { display: none; }
-}
-@media (max-width: 360px) {
-  .partner { font-size: 10px; }
-  .yv { height: 13px; }
 }
 </style>

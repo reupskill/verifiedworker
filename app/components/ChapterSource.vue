@@ -33,15 +33,15 @@ const rows = computed(() => [
 </template>
 
 <style scoped>
-.chapter { padding-top: 56px; padding-bottom: 56px; }
+.chapter { padding-top: 40px; padding-bottom: 40px; }
 .stage { padding: 24px; display: flex; flex-direction: column; gap: 10px; }
 .row { border-radius: 14px; padding: 12px 14px; display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; gap: 14px; align-items: center; }
 .row--fail { border-color: #F3C2BD; }
 .logo { height: 40px; display: flex; align-items: center; justify-content: center; }
 .logo img { max-width: 100%; max-height: 100%; display: block; }
-.code { width: 100%; height: 100%; border-radius: 10px; background: #FDECEA; color: #B0322A; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.code { width: 100%; height: 100%; border-radius: 10px; background: #FDECEA; color: #B0322A; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
 .when { font-size: 11px; color: var(--faint); }
-.what { font-size: 13.5px; font-weight: 700; color: var(--deep-ink); margin-top: 2px; }
+.what { font-size: 13.5px; font-weight: 700; color: var(--navy); margin-top: 2px; }
 .res { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
 .row--fail .res { color: #8A2620; }
 </style>

@@ -36,21 +36,21 @@ const { t } = useLang()
 </template>
 
 <style scoped>
-.chapter { padding-top: 56px; padding-bottom: 56px; }
+.chapter { padding-top: 40px; padding-bottom: 40px; }
 .mocks { display: flex; flex-direction: column; gap: 12px; }
-.checks { border-radius: 18px; box-shadow: 0 12px 36px rgba(17, 87, 102, 0.08); padding: 16px 18px; }
+.checks { border-radius: 18px; box-shadow: 0 12px 36px rgba(27, 27, 75, 0.08); padding: 16px 18px; }
 .head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-.title { font-size: 14px; font-weight: 800; color: var(--deep-ink); }
+.title { font-size: 14px; font-weight: 600; color: var(--navy); }
 .done { font-size: 11px; font-weight: 700; color: #0B7F6F; background: #E7F8F4; border-radius: 999px; padding: 3px 9px; white-space: nowrap; }
 .list { margin-top: 10px; }
 .row { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-top: 1px solid var(--hairline); }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); flex-shrink: 0; }
 .dot--warn { background: var(--orange); margin-top: 6px; }
-.n { flex: 1; font-size: 13px; color: var(--deep-ink); }
+.n { flex: 1; font-size: 13px; color: var(--navy); }
 .w { font-size: 11px; color: var(--faint); }
 .alert { border-color: #FFD6AE; border-radius: 18px; padding: 14px 18px; display: flex; gap: 12px; align-items: flex-start; }
 .body { flex: 1; }
 .alert-head { display: flex; justify-content: space-between; gap: 10px; }
-.alert-t { font-size: 13.5px; font-weight: 800; color: var(--deep-ink); }
+.alert-t { font-size: 13.5px; font-weight: 600; color: var(--navy); }
 .alert-b { font-size: 13px; color: #7A4A14; margin-top: 4px; line-height: 1.5; }
 </style>

@@ -31,20 +31,20 @@ const { t } = useLang()
 </template>
 
 <style scoped>
-.chapter { padding-top: 56px; padding-bottom: 56px; }
+.chapter { padding-top: 40px; padding-bottom: 40px; }
 .stage { padding: 32px; display: flex; justify-content: center; }
-.phone { width: 280px; max-width: 100%; background: var(--deep-ink); border-radius: 34px; padding: 9px; box-shadow: 0 24px 60px rgba(17, 87, 102, 0.22); }
+.phone { width: 280px; max-width: 100%; background: var(--navy-2); border-radius: 34px; padding: 9px; box-shadow: 0 24px 60px rgba(27, 27, 75, 0.22); }
 .screen { background: #FFFFFF; border-radius: 26px; overflow: hidden; }
-.top { background: var(--deep); color: #FFFFFF; padding: 16px 16px 14px; }
-.clock { font-size: 11px; color: #9AD5E3; }
-.app { font-size: 14px; font-weight: 800; margin-top: 6px; }
-.msg { font-size: 12px; color: var(--teal-200); margin-top: 6px; line-height: 1.5; }
+.top { background: var(--indigo); color: #FFFFFF; padding: 16px 16px 14px; }
+.clock { font-size: 11px; color: var(--cyan-light); }
+.app { font-size: 14px; font-weight: 600; margin-top: 6px; }
+.msg { font-size: 12px; color: var(--lav-200); margin-top: 6px; line-height: 1.5; }
 .steps { padding: 12px 14px 16px; display: flex; flex-direction: column; gap: 8px; }
 .step { display: flex; align-items: center; gap: 10px; border: 1px solid var(--border); border-radius: 11px; padding: 9px 10px; }
-.tick { width: 20px; height: 20px; border-radius: 50%; background: var(--mint); color: #FFFFFF; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.n { flex: 1; font-size: 12.5px; font-weight: 600; color: var(--deep-ink); }
+.tick { width: 20px; height: 20px; border-radius: 50%; background: var(--mint); color: #FFFFFF; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.n { flex: 1; font-size: 12.5px; font-weight: 600; color: var(--navy); }
 .w { font-size: 11px; color: var(--faint); }
-.note { background: var(--teal-100); border-radius: 10px; padding: 9px 10px; font-size: 11.5px; color: var(--deep); line-height: 1.45; }
+.note { background: var(--lav-100); border-radius: 10px; padding: 9px 10px; font-size: 11.5px; color: var(--indigo); line-height: 1.45; }
 
 @media (max-width: 420px) {
   .stage { padding: 20px; }

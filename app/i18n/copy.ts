@@ -1,4 +1,4 @@
-// Bilingual copy for the Vetted Worker landing page (design: Landing v3).
+// Bilingual copy for the Vetted Worker landing page (design: Vetted Worker Landing Elm v2).
 // The Arabic was drafted alongside the design; have a native speaker review it
 // (job levels and government authority names especially) before launch.
 
@@ -24,8 +24,7 @@ const en = {
       "l": "issuing authorities in 6 countries"
     }
   ],
-  "valE": "WHAT YOU GET",
-  "valH": "Fewer wrong hires. Faster deployment. Decisions you can defend.",
+  "valH": "Most bad hires look fine on paper. That's the problem.",
   "val": [
     {
       "k": "01",
@@ -40,23 +39,21 @@ const en = {
     {
       "k": "03",
       "h": "Defend every decision",
-      "b": "Every result carries its source, method and consent record — ready for an auditor, a client or a dispute."
+      "b": "Every result carries its source, method and consent record, ready for an auditor, a client or a dispute."
     }
   ],
-  "calcE": "THE COST OF GETTING IT WRONG",
-  "calcH": "What wrong hires cost you every year.",
-  "calcP": "Every failed placement is paid for twice: the recruitment fee, visa and flights, then a replacement and the weeks the role sits empty.",
+  "calcH": "Run your own numbers",
+  "calcP": "When a placement falls through you pay the recruitment fee, the visa and the flights, and then you pay them again for the replacement. Put in your figures and see what that adds up to.",
   "calcHires": "Overseas hires per year",
   "calcCost": "Cost per hire (SAR)",
   "calcRate": "Placements that fail (%)",
   "calcEx": "Example figures. Enter your own.",
-  "calcOutL": "SPENT ON WRONG HIRES EACH YEAR",
+  "calcOutL": "WHAT WRONG HIRES COST YOU A YEAR",
   "calcSub": "{n} failed placements × SAR {c}",
-  "calcNote": "Vetted Worker runs before any of this money is committed. A free pilot shows what it finds in your own intake.",
+  "calcNote": "We run the checks before you spend any of this. A free pilot on your next intake will show you what we'd have caught.",
   "calcCta": "Test it on my next intake",
-  "howE": "HOW IT WORKS",
-  "howH": "Two applicants. Nine days. One clear answer.",
-  "howP": "One link to the worker's phone. Every claim checked with the authority that issued it. A clear decision for your team before a riyal is spent on visas or flights.",
+  "howH": "Follow two applicants through it",
+  "howP": "Juan is a caregiver in Manila. Asif is an electrician in Lahore. They applied to the same Riyadh employer on the same day. Here's what happened next.",
   "howSteps": [
     {
       "d": "Day 1",
@@ -84,10 +81,9 @@ const en = {
       "href": "#decision"
     }
   ],
-  "howAsifR": "Lahore · electrician. Stopped before the visa — no fees lost.",
-  "howJuanR": "Manila · caregiver. Cleared, with one question for interview.",
-  "audE": "WHO IT'S FOR",
-  "audH": "Built for everyone whose name is on the hire.",
+  "howAsifR": "Stopped on day 4, before any fees were paid.",
+  "howJuanR": "Cleared on day 9, with one question for interview.",
+  "audH": "Who uses it",
   "aud": [
     {
       "h": "Employers",
@@ -117,8 +113,7 @@ const en = {
       ]
     }
   ],
-  "faqE": "BEFORE YOU START",
-  "faqH": "Questions buyers ask.",
+  "faqH": "Things people usually ask us",
   "faq": [
     {
       "q": "Does the worker pay anything?",
@@ -141,34 +136,124 @@ const en = {
       "a": "Start in the dashboard on day one, or connect by API to your HR or recruitment system."
     }
   ],
-  "inPartner": "in partnership with",
+  "elmH1": "From the company behind the ",
+  "elmH2": "Kingdom's digital services",
+  "elmH3": ".",
+  "elmP": "Elm has spent more than 30 years building the digital services that people and businesses in Saudi Arabia use every day. Vetted Worker brings that same standard to the people you bring into the Kingdom: checked at the source, with consent, and on the record.",
+  "elmNums": [
+    {
+      "v": "3+",
+      "l": "billion transactions"
+    },
+    {
+      "v": "30+",
+      "l": "million users"
+    },
+    {
+      "v": "700+",
+      "l": "thousand clients"
+    },
+    {
+      "v": "350+",
+      "l": "electronic services"
+    }
+  ],
+  "elmSrc": "Figures published by Elm at elm.sa.",
+  "ftP": "Vetted Worker is offered by Elm to workforce and recruitment companies bringing workers into Saudi Arabia.",
+  "ftH1": "Vetted Worker",
+  "ftH2": "Contact",
+  "ftTeam": "The Vetted Worker team",
+  "ftLoc": "Riyadh, Saudi Arabia",
+  "ftPartner": "Data and verification partner",
+  "ftLinks": [
+    {
+      "l": "How it works",
+      "href": "#how"
+    },
+    {
+      "l": "Packages",
+      "href": "#levels"
+    },
+    {
+      "l": "Data sources",
+      "href": "#sources"
+    },
+    {
+      "l": "Questions",
+      "href": "#faq"
+    },
+    {
+      "l": "Free pilot",
+      "href": "#pilot"
+    }
+  ],
+  "legal": [
+    {
+      "h": "Vetted Worker",
+      "b": "is a service offered by Elm Company (\"Elm\") to workforce and recruitment companies in the Kingdom of Saudi Arabia. Identity, document and background verification services, the underlying data sources and the technology platform are provided by Youverify Inc. (\"Youverify\"), Elm's data and verification partner and an Elm portfolio company."
+    },
+    {
+      "h": "Security.",
+      "b": "Youverify's information security management system is certified to ISO/IEC 27001, its protection of personal data in public cloud environments is certified to ISO/IEC 27018, its AI management system is certified to ISO/IEC 42001, and its controls are independently examined under a SOC 2 Type II report. Certificates and reports are available to clients on request."
+    },
+    {
+      "h": "Data protection.",
+      "b": "Personal data is processed only with the worker's consent and only for the checks requested, in accordance with the Personal Data Protection Law of the Kingdom of Saudi Arabia and the applicable law of the worker's home country. Workers can see who has accessed their file and withdraw consent at any time."
+    },
+    {
+      "h": "Reports.",
+      "b": "Worker Trust Reports reflect information returned by issuing authorities, registries, employers and accredited local partners at the time of checking. They support the employer's hiring decision but do not replace it, and they are not legal or immigration advice. Checks, coverage and turnaround vary by country and by the availability of each source."
+    },
+    {
+      "h": "",
+      "b": "Elm and the Elm logo are trademarks of Elm Company. Youverify is a trademark of Youverify Inc. Names of authorities, registries and programmes are used only to describe where a check is performed and do not imply their endorsement. People and results shown on this site are fictitious examples."
+    }
+  ],
+  "assure": [
+    "Consent first",
+    "PDPL aligned",
+    "Arabic and English reports"
+  ],
+  "chipPillT": "{n} of 7 clear",
+  "faceL": "Live face match · 96%",
+  "scanL": "IDENTITY CHECK",
+  "doneL": "Verified · ready for visa",
+  "locL": "Riyadh, SA",
+  "heroAlt": "Worker in Riyadh verifying his identity on his phone",
+  "chipChecks": [
+    "Passport and PhilSys record match",
+    "Document authentic, 7 of 7 features",
+    "Live person, 96% face match",
+    "No duplicate identity",
+    "No match across 500+ watchlists",
+    "Wafid medical: fit",
+    "Recruitment agency licence active"
+  ],
+  "mapCap1": "18 authorities across 6 countries",
+  "mapCap2": "Next: Nepal, Indonesia, Sri Lanka, Kenya, Ethiopia, Uganda",
+  "lgDig": "Matched in real time against an official or authorised source, in seconds.",
+  "lgAuth": "The worker's own official certificate, verified with the authority that issued it.",
+  "lgConf": "Verified directly with the employer or institution.",
+  "pilotE2": "Complimentary pilot",
+  "plA": "Start with ",
+  "plB": "20 workers",
+  "plC": " from your next intake.",
+  "copyL": "Copy",
+  "copiedL": "Copied",
   "navCta": "Start a free pilot",
-  "heroE": "VETTED WORKER · AN ELM SERVICE",
+  "heroE": "Vetted Worker, from Elm",
   "h1a": "Know who you're hiring ",
   "h1b": "before the visa",
   "h1c": ".",
-  "heroP": "Vetted Worker confirms every overseas hire's identity, police record, qualifications and work history with the authorities that issued them — so the wrong hire is stopped on day 4, not after arrival.",
+  "heroP": "We check each overseas hire's passport, police record, certificates and past jobs with the offices that issued them. If something's off, you hear about it on day 4, while it still costs you nothing.",
   "cta1": "Start a free pilot",
   "cta2": "See how it works",
-  "certT": "Certified",
   "mapRiyadh": "Riyadh",
-  "mapLahore": "Lahore",
-  "mapManila": "Manila",
   "juan": "Juan Dela Cruz",
-  "juanMeta": "Manila → Riyadh · Caregiver",
   "asif": "Asif Raza",
-  "asifMeta": "Lahore → Riyadh · Electrician",
   "reviewD9": "Review · Day 9",
   "stopD4": "Stop · Day 4",
   "proceed": "Proceed",
-  "bar": [
-    "Invite",
-    "Identity",
-    "Source",
-    "History",
-    "Decision"
-  ],
-  "fict": "Fictitious workers. Real checks.",
   "c1l": "INVITE",
   "c1t": "Day 1 · 09:12",
   "c1a": "Five minutes on ",
@@ -202,7 +287,7 @@ const en = {
   "c2a": "The person matches ",
   "c2b": "the passport",
   "c2c": ".",
-  "c2p": "Before Juan puts his phone down, seven checks are back. At 14:41 the same checks run for Asif in Lahore — and his selfie does not match his passport photo.",
+  "c2p": "Before Juan puts his phone down, seven checks are back. At 14:41 the same checks run for Asif in Lahore, and his selfie doesn't match his passport photo.",
   "c2s1": "checks in seconds",
   "c2s2": "watchlists screened",
   "c2mockT": "instant checks",
@@ -244,7 +329,7 @@ const en = {
   "c3a": "Confirmed by ",
   "c3b": "whoever issued it",
   "c3c": ".",
-  "c3p": "A certificate is only as good as its issuer. Juan's police clearance is authenticated with the NBI. Asif's police character certificate goes back to the office whose stamp it carries — and they have no record of it.",
+  "c3p": "A certificate is only as good as whoever issued it. Juan's police clearance is confirmed with the NBI. Asif's goes back to the police office whose stamp is on it, and they've never heard of it.",
   "c3s1": "working days",
   "c3s2": "authorities across 6 countries",
   "c3r1w": "Day 2 · Juan",
@@ -268,7 +353,7 @@ const en = {
   "c4a": "What he said, ",
   "c4b": "and what they said",
   "c4c": ".",
-  "c4p": "Juan declared four years at his last employer. Their HR confirms eighteen months, in good standing and eligible for rehire. Not a reason to lose a good caregiver — but worth one question at interview.",
+  "c4p": "Juan said four years at his last job. Their HR says eighteen months, left on good terms, would hire him again. That's not a reason to turn down a good caregiver, but it's worth asking about at interview.",
   "c4mockT": "Last employer · Manila",
   "c4decl": "DECLARED",
   "c4declV": "4 years",
@@ -280,16 +365,15 @@ const en = {
   "c4gulfR": "2021–2023 confirmed, eligible for rehire",
   "c5l": "DECISION",
   "c5t": "Day 4 · Day 9",
-  "c5a": "One report. ",
-  "c5b": "Three outcomes",
+  "c5a": "Here's what lands on your desk",
+  "c5b": "",
   "c5c": ".",
   "c5p": "Every line shows what was checked, where and what came back, with the evidence pack and consent record attached. In a dashboard or by API, in Arabic and English.",
-  "c5asif": "Stopped on day 4 — before a visa, a flight or a recruitment fee was committed. Face mismatch and an unverifiable police certificate, with the evidence attached.",
+  "c5asif": "Stopped on day 4, before a visa, a flight or a recruitment fee was paid. His face didn't match his passport and his police certificate couldn't be traced. The evidence is attached.",
   "c5juan": "Report on day 9. Clear on identity, record and licence. One discrepancy on tenure. Recommended action: confirm caregiving experience at interview.",
   "c5okT": "When everything matches",
-  "c5ok": "Every check agrees with the worker's documents and claims. Mobilise with confidence.",
-  "lvE": "THE PLATFORM BEHIND THE STORY",
-  "lvH": "Match the depth of the check to the role.",
+  "c5ok": "Everything the worker told you checks out. Book the flight.",
+  "lvH": "Pick how deep you want to go",
   "levels": [
     {
       "n": "Essential",
@@ -325,16 +409,8 @@ const en = {
       ]
     }
   ],
-  "srcE": "CREDIBILITY OF THE DATA SOURCES",
-  "srcH": "Where the evidence comes from.",
-  "srcP": "Every line in a Worker Trust Report traces back to a named authority, registry or accredited programme and says how it was checked.",
-  "srcPanelSub": "3 authorities",
-  "srcS1": "issuing authorities",
-  "srcS2": "source countries",
-  "srcS3": "of results name their source",
-  "mDigD": " · direct registry link",
-  "mAuthD": " · confirmed by issuer",
-  "mConfD": " · verified by accredited partner",
+  "srcH": "Who we check with",
+  "srcP": "Every result in the report names the office or registry that confirmed it, and how.",
   "srcFoot": "Where a record isn't online, accredited local partners verify it on the ground, and the report says so.",
   "countries": [
     "Saudi Arabia",
@@ -462,8 +538,6 @@ const en = {
       "b": "Saudi PDPL aligned, on a platform certified to SOC 2 Type II, ISO 27001 and ISO 27018."
     }
   ],
-  "pilotE": "",
-  "pilotH": "See it on your next 20 hires.",
   "pilotP": "Free of charge, no obligation to buy, and live within five working days of sign-off.",
   "provH": "You provide",
   "provB": "Up to 20 workers from your next intake from the Philippines or India, each of whom agrees to be checked. A named contact in your recruitment team or agency.",
@@ -516,69 +590,12 @@ const en = {
   "errReq": "Please complete company, contact name, a valid email, a corridor and the consent confirmation.",
   "errCount": "Number of workers must be between 1 and 20.",
   "okH": "Pilot request received",
-  "okBody": "Thank you, {name}. Your email app has opened with your request to vw@youverify.co. Send it, and your Elm and Youverify team will reply to {email} within one working day to confirm your start date.",
+  "okBody": "Thank you, {name}. Your email app has opened with your request to vw@youverify.co. Send it, and your Elm team will reply to {email} within one working day to confirm your start date.",
   "okAgain": "Submit another request",
-  "contactE": "CONTACT US",
-  "footTag": "Fraud and AML compliance for every market.",
-  "footCols": [
-    {
-      "h": "Solution",
-      "links": [
-        {
-          "l": "Customer onboarding",
-          "href": "https://youverify.co/en/solution/customer-onboarding"
-        },
-        {
-          "l": "Fraud insights",
-          "href": "https://youverify.co/en/solution/fraud-insights"
-        },
-        {
-          "l": "Transaction monitoring",
-          "href": "https://youverify.co/en/solution/transaction-monitoring"
-        }
-      ]
-    },
-    {
-      "h": "Company",
-      "links": [
-        {
-          "l": "About us",
-          "href": "https://youverify.co/en/company/about-us"
-        },
-        {
-          "l": "Compliance certifications",
-          "href": "https://youverify.co/en/company/compliance-certifications"
-        },
-        {
-          "l": "Contact us",
-          "href": "https://youverify.co/en/company/contact-us"
-        }
-      ]
-    },
-    {
-      "h": "Legal",
-      "links": [
-        {
-          "l": "Privacy policy",
-          "href": "https://youverify.co/en/privacy-policy"
-        },
-        {
-          "l": "Terms of use",
-          "href": "https://youverify.co/en/terms-of-use"
-        },
-        {
-          "l": "Information security",
-          "href": "https://youverify.co/en/information-security-policy"
-        }
-      ]
-    }
-  ],
   "copy": "©2026 Elm. All rights reserved.",
-  "partner": "Vetted Worker by Elm, in partnership with Youverify.",
   "mailFallback": "Email app didn't open?",
   "mailFallbackLink": "Send it to vw@youverify.co",
   "mailSubject": "Vetted Worker pilot request · {company}",
-  "f_sending": "Opening your email app…",
   "langLabel": "Language"
 }
 
@@ -603,8 +620,7 @@ const ar: Copy = {
       "l": "جهة مُصدِرة في 6 دول"
     }
   ],
-  "valE": "ما تحصل عليه",
-  "valH": "توظيف خاطئ أقل. استقدام أسرع. قرارات يمكنك الدفاع عنها.",
+  "valH": "معظم التوظيفات الخاطئة تبدو سليمة على الورق. وهنا المشكلة.",
   "val": [
     {
       "k": "01",
@@ -619,11 +635,10 @@ const ar: Copy = {
     {
       "k": "03",
       "h": "دافع عن كل قرار",
-      "b": "كل نتيجة تحمل مصدرها وطريقتها وسجل الموافقة — جاهزة لمدقق أو عميل أو نزاع."
+      "b": "كل نتيجة تحمل مصدرها وطريقتها وسجل الموافقة، جاهزة لمدقق أو عميل أو نزاع."
     }
   ],
-  "calcE": "تكلفة الخطأ",
-  "calcH": "ما يكلّفك التوظيف الخاطئ كل عام.",
+  "calcH": "احسبها بأرقامك",
   "calcP": "كل استقدام فاشل يُدفع ثمنه مرتين: رسوم الاستقدام والتأشيرة والطيران، ثم البديل والأسابيع التي تبقى فيها الوظيفة شاغرة.",
   "calcHires": "عدد العمال المستقدمين سنويًا",
   "calcCost": "تكلفة الاستقدام للعامل (ريال)",
@@ -633,9 +648,8 @@ const ar: Copy = {
   "calcSub": "{n} استقدام فاشل × {c} ريال",
   "calcNote": "يعمل Vetted Worker قبل الالتزام بأي من هذه المبالغ. وتُظهر التجربة المجانية ما يكتشفه في دفعتك القادمة.",
   "calcCta": "جرّبه على دفعتي القادمة",
-  "howE": "كيف يعمل",
-  "howH": "متقدّمان. تسعة أيام. إجابة واضحة.",
-  "howP": "رابط واحد إلى هاتف العامل. كل ادعاء يُتحقق منه مع الجهة التي أصدرته. وقرار واضح لفريقك — قبل إنفاق ريال واحد على التأشيرات أو الطيران.",
+  "howH": "تابع متقدّمَين خطوة بخطوة",
+  "howP": "خوان مقدّم رعاية من مانيلا، وآصف كهربائي من لاهور. تقدّما لصاحب العمل نفسه في الرياض في اليوم نفسه. وهذا ما حدث بعد ذلك.",
   "howSteps": [
     {
       "d": "اليوم 1",
@@ -663,10 +677,9 @@ const ar: Copy = {
       "href": "#decision"
     }
   ],
-  "howAsifR": "لاهور · كهربائي. أُوقف قبل التأشيرة — دون خسارة أي رسوم.",
-  "howJuanR": "مانيلا · مقدّم رعاية. سليم، مع سؤال واحد للمقابلة.",
-  "audE": "لمن هذه الخدمة",
-  "audH": "لكل من يتحمّل مسؤولية التوظيف.",
+  "howAsifR": "أُوقف في اليوم 4 قبل دفع أي رسوم.",
+  "howJuanR": "سليم في اليوم 9، مع سؤال واحد للمقابلة.",
+  "audH": "من يستخدم الخدمة",
   "aud": [
     {
       "h": "أصحاب العمل",
@@ -696,8 +709,7 @@ const ar: Copy = {
       ]
     }
   ],
-  "faqE": "قبل أن تبدأ",
-  "faqH": "أسئلة يطرحها العملاء.",
+  "faqH": "أسئلة نسمعها كثيرًا",
   "faq": [
     {
       "q": "هل يدفع العامل أي شيء؟",
@@ -720,34 +732,124 @@ const ar: Copy = {
       "a": "ابدأ من لوحة التحكم من اليوم الأول، أو اربطها عبر واجهة برمجية بنظام الموارد البشرية أو الاستقدام."
     }
   ],
-  "inPartner": "بالشراكة مع",
+  "elmH1": "من الشركة التي تقف وراء ",
+  "elmH2": "الخدمات الرقمية في المملكة",
+  "elmH3": ".",
+  "elmP": "أمضت علم أكثر من 30 عامًا في بناء الخدمات الرقمية التي يعتمد عليها الأفراد والشركات في المملكة العربية السعودية كل يوم. ويحمل Vetted Worker المعيار نفسه إلى من تستقدمهم إلى المملكة: تحقق من المصدر، بموافقة، وموثَّق.",
+  "elmNums": [
+    {
+      "v": "+3",
+      "l": "مليار عملية"
+    },
+    {
+      "v": "+30",
+      "l": "مليون مستخدم"
+    },
+    {
+      "v": "+700",
+      "l": "ألف عميل"
+    },
+    {
+      "v": "+350",
+      "l": "خدمة إلكترونية"
+    }
+  ],
+  "elmSrc": "أرقام منشورة من علم على elm.sa.",
+  "ftP": "تقدّم علم خدمة Vetted Worker لشركات القوى العاملة والاستقدام التي تستقدم العمال إلى المملكة العربية السعودية.",
+  "ftH1": "Vetted Worker",
+  "ftH2": "تواصل معنا",
+  "ftTeam": "فريق Vetted Worker",
+  "ftLoc": "الرياض، المملكة العربية السعودية",
+  "ftPartner": "شريك البيانات والتحقق",
+  "ftLinks": [
+    {
+      "l": "كيف يعمل",
+      "href": "#how"
+    },
+    {
+      "l": "الباقات",
+      "href": "#levels"
+    },
+    {
+      "l": "مصادر البيانات",
+      "href": "#sources"
+    },
+    {
+      "l": "الأسئلة",
+      "href": "#faq"
+    },
+    {
+      "l": "التجربة المجانية",
+      "href": "#pilot"
+    }
+  ],
+  "legal": [
+    {
+      "h": "Vetted Worker",
+      "b": "خدمة تقدّمها شركة علم (\"علم\") لشركات القوى العاملة والاستقدام في المملكة العربية السعودية. وتُقدَّم خدمات التحقق من الهوية والمستندات والخلفية، ومصادر البيانات، والمنصة التقنية من قِبل شركة Youverify Inc. (\"يوفيرايفاي\")، شريك علم في البيانات والتحقق وإحدى الشركات في محفظة علم الاستثمارية."
+    },
+    {
+      "h": "الأمن.",
+      "b": "نظام إدارة أمن المعلومات لدى يوفيرايفاي حاصل على شهادة ISO/IEC 27001، وحماية البيانات الشخصية في البيئات السحابية العامة حاصلة على شهادة ISO/IEC 27018، ونظام إدارة الذكاء الاصطناعي حاصل على شهادة ISO/IEC 42001، وتخضع ضوابطها لفحص مستقل بموجب تقرير SOC 2 Type II. والشهادات والتقارير متاحة للعملاء عند الطلب."
+    },
+    {
+      "h": "حماية البيانات.",
+      "b": "تُعالج البيانات الشخصية بموافقة العامل فقط، ولأغراض الفحوصات المطلوبة فقط، وفقًا لنظام حماية البيانات الشخصية في المملكة العربية السعودية والأنظمة المعمول بها في بلد العامل. ويمكن للعامل معرفة من اطّلع على ملفه وسحب موافقته في أي وقت."
+    },
+    {
+      "h": "التقارير.",
+      "b": "تعكس تقارير موثوقية العامل المعلومات الواردة من الجهات المُصدِرة والسجلات وأصحاب العمل والشركاء المحليين المعتمدين وقت إجراء الفحص. وهي تدعم قرار التوظيف لدى صاحب العمل ولا تحلّ محله، ولا تُعد استشارة قانونية أو استشارة في شؤون الهجرة. وتختلف الفحوصات والتغطية ومدة الإنجاز بحسب الدولة ومدى توفر كل مصدر."
+    },
+    {
+      "h": "",
+      "b": "علم وشعار علم علامتان تجاريتان لشركة علم، ويوفيرايفاي علامة تجارية لشركة Youverify Inc. وتُذكر أسماء الجهات والسجلات والبرامج لبيان مكان إجراء الفحص فقط، ولا يعني ذكرها تأييدها للخدمة. والأشخاص والنتائج المعروضة في هذا الموقع أمثلة افتراضية."
+    }
+  ],
+  "assure": [
+    "الموافقة أولًا",
+    "متوافق مع نظام حماية البيانات الشخصية",
+    "تقارير بالعربية والإنجليزية"
+  ],
+  "chipPillT": "{n} من 7 سليمة",
+  "faceL": "مطابقة حيّة للوجه · 96%",
+  "scanL": "التحقق من الهوية",
+  "doneL": "موثَّق · جاهز للتأشيرة",
+  "locL": "Riyadh, SA",
+  "heroAlt": "عامل في الرياض يتحقق من هويته عبر هاتفه",
+  "chipChecks": [
+    "تطابق الجواز وسجل PhilSys",
+    "المستند أصلي، 7 من 7 خصائص",
+    "شخص حقيقي، تطابق الوجه 96%",
+    "لا هوية مكررة",
+    "لا تطابق في أكثر من 500 قائمة مراقبة",
+    "الفحص الطبي (وافد): لائق",
+    "ترخيص وكالة الاستقدام ساري"
+  ],
+  "mapCap1": "18 جهة في 6 دول",
+  "mapCap2": "التالي: نيبال وإندونيسيا وسريلانكا وكينيا وإثيوبيا وأوغندا",
+  "lgDig": "مطابقة فورية مع مصدر رسمي أو معتمد، خلال ثوانٍ.",
+  "lgAuth": "الشهادة الرسمية الخاصة بالعامل، موثَّقة مع الجهة التي أصدرتها.",
+  "lgConf": "تحقق مباشر مع صاحب العمل أو المؤسسة.",
+  "pilotE2": "تجربة مجانية",
+  "plA": "ابدأ بـ",
+  "plB": "20 عاملًا",
+  "plC": " من دفعتك القادمة.",
+  "copyL": "نسخ",
+  "copiedL": "تم النسخ",
   "navCta": "ابدأ تجربة مجانية",
-  "heroE": "Vetted Worker · خدمة من علم",
+  "heroE": "Vetted Worker من علم",
   "h1a": "اعرف من توظّف ",
   "h1b": "قبل التأشيرة",
   "h1c": ".",
-  "heroP": "يؤكد Vetted Worker هوية كل عامل مستقدم وسجله الجنائي ومؤهلاته وتاريخه الوظيفي مع الجهات التي أصدرتها — ليُوقف التوظيف الخاطئ في اليوم الرابع، لا بعد الوصول.",
+  "heroP": "يؤكد Vetted Worker هوية كل عامل مستقدم وسجله الجنائي ومؤهلاته وتاريخه الوظيفي مع الجهات التي أصدرتها، ليُوقف التوظيف الخاطئ في اليوم الرابع، لا بعد الوصول.",
   "cta1": "ابدأ تجربة مجانية",
   "cta2": "كيف يعمل",
-  "certT": "معتمد",
   "mapRiyadh": "الرياض",
-  "mapLahore": "لاهور",
-  "mapManila": "مانيلا",
   "juan": "خوان ديلا كروز",
-  "juanMeta": "مانيلا ← الرياض · مقدّم رعاية",
   "asif": "آصف رضا",
-  "asifMeta": "لاهور ← الرياض · كهربائي",
   "reviewD9": "مراجعة · اليوم 9",
   "stopD4": "إيقاف · اليوم 4",
   "proceed": "متابعة",
-  "bar": [
-    "الدعوة",
-    "الهوية",
-    "المصدر",
-    "السجل",
-    "القرار"
-  ],
-  "fict": "عمال افتراضيون. فحوصات حقيقية.",
   "c1l": "الدعوة",
   "c1t": "اليوم 1 · 09:12",
   "c1a": "خمس دقائق على ",
@@ -781,7 +883,7 @@ const ar: Copy = {
   "c2a": "الشخص يطابق ",
   "c2b": "الجواز",
   "c2c": ".",
-  "c2p": "قبل أن يضع خوان هاتفه، تعود سبعة فحوصات. وفي الساعة 14:41 تُجرى الفحوصات نفسها لآصف في لاهور — فإذا بصورته الذاتية لا تطابق صورة جوازه.",
+  "c2p": "قبل أن يضع خوان هاتفه، تعود سبعة فحوصات. وفي الساعة 14:41 تُجرى الفحوصات نفسها لآصف في لاهور، فإذا بصورته الذاتية لا تطابق صورة جوازه.",
   "c2s1": "فحوصات في ثوانٍ",
   "c2s2": "قائمة مراقبة",
   "c2mockT": "الفحوصات الفورية",
@@ -823,7 +925,7 @@ const ar: Copy = {
   "c3a": "مؤكَّد مع ",
   "c3b": "الجهة التي أصدرته",
   "c3c": ".",
-  "c3p": "قيمة الشهادة من قيمة مُصدِرها. تُوثَّق شهادة حسن سيرة خوان مع المكتب الوطني للتحقيقات. أما شهادة آصف فتعود إلى المكتب الذي يحمل ختمه — ولا يوجد لديه أي سجل لها.",
+  "c3p": "قيمة الشهادة من قيمة مُصدِرها. تُوثَّق شهادة حسن سيرة خوان مع المكتب الوطني للتحقيقات. أما شهادة آصف فتعود إلى المكتب الذي يحمل ختمه، ولا يوجد لديه أي سجل لها.",
   "c3s1": "أيام عمل",
   "c3s2": "جهة في 6 دول",
   "c3r1w": "اليوم 2 · خوان",
@@ -847,7 +949,7 @@ const ar: Copy = {
   "c4a": "ما قاله هو، ",
   "c4b": "وما قالوه هم",
   "c4c": ".",
-  "c4p": "صرّح خوان بأربع سنوات لدى آخر صاحب عمل. وتؤكد الموارد البشرية لديهم ثمانية عشر شهرًا، بسجل جيد وأهلية لإعادة التوظيف. ليس سببًا لخسارة مقدّم رعاية جيد — لكنه يستحق سؤالًا في المقابلة.",
+  "c4p": "صرّح خوان بأربع سنوات لدى آخر صاحب عمل. وتؤكد الموارد البشرية لديهم ثمانية عشر شهرًا، بسجل جيد وأهلية لإعادة التوظيف. ليس سببًا لخسارة مقدّم رعاية جيد، لكنه يستحق سؤالًا في المقابلة.",
   "c4mockT": "آخر صاحب عمل · مانيلا",
   "c4decl": "المُصرَّح به",
   "c4declV": "4 سنوات",
@@ -859,16 +961,15 @@ const ar: Copy = {
   "c4gulfR": "2021–2023 مؤكَّد، مؤهل لإعادة التوظيف",
   "c5l": "القرار",
   "c5t": "اليوم 4 · اليوم 9",
-  "c5a": "تقرير واحد. ",
-  "c5b": "ثلاث نتائج",
+  "c5a": "هذا ما يصلك في النهاية",
+  "c5b": "",
   "c5c": ".",
   "c5p": "يوضح كل سطر ما فُحص وأين وما النتيجة، مع حزمة الأدلة وسجل الموافقة. عبر لوحة التحكم أو واجهة برمجية، بالعربية والإنجليزية.",
-  "c5asif": "أُوقف في اليوم 4 — قبل الالتزام بتأشيرة أو رحلة أو رسوم استقدام. عدم تطابق الوجه وشهادة حسن سيرة يتعذّر التحقق منها، مع الأدلة مرفقة.",
+  "c5asif": "أُوقف في اليوم 4، قبل الالتزام بتأشيرة أو رحلة أو رسوم استقدام. عدم تطابق الوجه وشهادة حسن سيرة يتعذّر التحقق منها، مع الأدلة مرفقة.",
   "c5juan": "التقرير في اليوم 9. سليم من حيث الهوية والسجل والترخيص. اختلاف واحد في مدة الخدمة. الإجراء الموصى به: تأكيد خبرة الرعاية في المقابلة.",
   "c5okT": "حين يتطابق كل شيء",
   "c5ok": "كل الفحوصات تتفق مع مستندات العامل وادعاءاته. استقدم بثقة.",
-  "lvE": "المنصة وراء القصة",
-  "lvH": "طابق عمق الفحص مع طبيعة الوظيفة.",
+  "lvH": "اختر عمق الفحص",
   "levels": [
     {
       "n": "الأساسي",
@@ -904,16 +1005,8 @@ const ar: Copy = {
       ]
     }
   ],
-  "srcE": "موثوقية مصادر البيانات",
-  "srcH": "من أين تأتي الأدلة.",
-  "srcP": "كل سطر في تقرير موثوقية العامل يعود إلى جهة أو سجل أو برنامج معتمد محدد — ويوضح طريقة التحقق.",
-  "srcPanelSub": "3 جهات",
-  "srcS1": "جهة مُصدِرة",
-  "srcS2": "دول المصدر",
-  "srcS3": "من النتائج تذكر مصدرها",
-  "mDigD": " · ربط مباشر بالسجل",
-  "mAuthD": " · مؤكَّد من الجهة المُصدِرة",
-  "mConfD": " · تحقق عبر شريك معتمد",
+  "srcH": "مع من نتحقق",
+  "srcP": "كل سطر في تقرير موثوقية العامل يعود إلى جهة أو سجل أو برنامج معتمد محدد، ويوضح طريقة التحقق.",
   "srcFoot": "حين لا يكون السجل متاحًا إلكترونيًا، يتحقق منه شركاء محليون معتمدون ميدانيًا، ويذكر التقرير ذلك.",
   "countries": [
     "المملكة العربية السعودية",
@@ -1041,8 +1134,6 @@ const ar: Copy = {
       "b": "متوافق مع نظام حماية البيانات الشخصية، على منصة حاصلة على SOC 2 Type II وISO 27001 وISO 27018."
     }
   ],
-  "pilotE": "تجربة مجانية",
-  "pilotH": "جرّبه على أول 20 عاملًا في دفعتك القادمة. مجانًا.",
   "pilotP": "مجانًا، دون أي التزام بالشراء، وتبدأ خلال خمسة أيام عمل من الموافقة.",
   "provH": "ما تقدّمه",
   "provB": "ما يصل إلى 20 عاملًا من دفعتك القادمة من الفلبين أو الهند، يوافق كل منهم على الفحص. ومسؤول تواصل محدد في فريق الاستقدام أو الوكالة.",
@@ -1095,69 +1186,12 @@ const ar: Copy = {
   "errReq": "يرجى إكمال اسم الشركة واسم مسؤول التواصل وبريد إلكتروني صحيح والممر وتأكيد الموافقة.",
   "errCount": "يجب أن يكون عدد العمال بين 1 و20.",
   "okH": "تم استلام طلب التجربة",
-  "okBody": "شكرًا {name}. فتحنا تطبيق البريد لديك وفيه طلبك إلى vw@youverify.co. أرسله، وسيتواصل معك فريق علم ويوفيرايفاي على {email} خلال يوم عمل واحد لتأكيد تاريخ البدء.",
+  "okBody": "شكرًا {name}. فتحنا تطبيق البريد لديك وفيه طلبك إلى vw@youverify.co. أرسله، وسيتواصل معك فريق علم على {email} خلال يوم عمل واحد لتأكيد تاريخ البدء.",
   "okAgain": "إرسال طلب آخر",
-  "contactE": "تواصل معنا",
-  "footTag": "الامتثال لمكافحة الاحتيال وغسل الأموال لكل سوق.",
-  "footCols": [
-    {
-      "h": "الحلول",
-      "links": [
-        {
-          "l": "تأهيل العملاء",
-          "href": "https://youverify.co/ar/solution/customer-onboarding"
-        },
-        {
-          "l": "رؤى الاحتيال",
-          "href": "https://youverify.co/ar/solution/fraud-insights"
-        },
-        {
-          "l": "مراقبة المعاملات",
-          "href": "https://youverify.co/ar/solution/transaction-monitoring"
-        }
-      ]
-    },
-    {
-      "h": "الشركة",
-      "links": [
-        {
-          "l": "من نحن",
-          "href": "https://youverify.co/ar/company/about-us"
-        },
-        {
-          "l": "شهادات الامتثال",
-          "href": "https://youverify.co/ar/company/compliance-certifications"
-        },
-        {
-          "l": "اتصل بنا",
-          "href": "https://youverify.co/ar/company/contact-us"
-        }
-      ]
-    },
-    {
-      "h": "القانونية",
-      "links": [
-        {
-          "l": "سياسة الخصوصية",
-          "href": "https://youverify.co/ar/privacy-policy"
-        },
-        {
-          "l": "شروط الاستخدام",
-          "href": "https://youverify.co/ar/terms-of-use"
-        },
-        {
-          "l": "سياسة أمن المعلومات",
-          "href": "https://youverify.co/ar/information-security-policy"
-        }
-      ]
-    }
-  ],
   "copy": "©2026 علم. جميع الحقوق محفوظة.",
-  "partner": "Vetted Worker من علم، بالشراكة مع يوفيرايفاي.",
   "mailFallback": "لم يُفتح تطبيق البريد؟",
   "mailFallbackLink": "أرسله إلى vw@youverify.co",
   "mailSubject": "طلب تجربة Vetted Worker · {company}",
-  "f_sending": "جارٍ فتح تطبيق البريد…",
   "langLabel": "اللغة"
 }
 

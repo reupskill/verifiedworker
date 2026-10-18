@@ -10,7 +10,6 @@ const toggle = (i: number) => { open.value = open.value === i ? -1 : i }
   <section id="faq" class="faq">
     <div class="wrap grid">
       <div>
-        <div class="eyebrow">{{ t.faqE }}</div>
         <h2 class="h2 big">{{ t.faqH }}</h2>
         <div class="trust">
           <div v-for="tr in t.trust" :key="tr.h" class="tr">
@@ -42,17 +41,17 @@ const toggle = (i: number) => { open.value = open.value === i ? -1 : i }
 
 <style scoped>
 .faq { border-top: 1px solid var(--border); }
-.grid { padding-top: 80px; padding-bottom: 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 48px; align-items: start; }
+.grid { padding-top: 44px; padding-bottom: 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 48px; align-items: start; }
 .trust { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
 .tr { display: flex; gap: 12px; align-items: flex-start; }
-.mark { width: 28px; height: 28px; border-radius: 7px; background: var(--deep); clip-path: polygon(0 0, 100% 0, 100% 100%, 18% 100%, 0 72%); flex-shrink: 0; }
-.tr-h { font-size: 14.5px; font-weight: 700; color: var(--deep-ink); }
+.mark { width: 28px; height: 28px; border-radius: 7px; background: var(--indigo); background-image: linear-gradient(135deg, var(--purple), var(--cyan)); flex-shrink: 0; }
+.tr-h { font-size: 14.5px; font-weight: 700; color: var(--navy); }
 .tr-b { font-size: 13.5px; color: var(--muted); margin-top: 4px; line-height: 1.55; }
 .list { display: flex; flex-direction: column; }
 .qa { border-bottom: 1px solid var(--border); }
 h3 { margin: 0; }
-.q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; cursor: pointer; background: none; border: 0; text-align: start; font-size: 16px; font-weight: 700; color: var(--deep-ink); }
-.q:hover { color: var(--deep); }
-.sign { font-size: 20px; font-weight: 600; color: var(--blue); line-height: 1; flex-shrink: 0; }
+.q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; cursor: pointer; background: none; border: 0; text-align: start; font-size: 16px; font-weight: 700; color: var(--navy); }
+.q:hover { color: var(--indigo); }
+.sign { font-size: 20px; font-weight: 600; color: var(--cyan); line-height: 1; flex-shrink: 0; }
 .a { font-size: 14.5px; color: var(--ink-2); line-height: 1.7; padding: 0 0 20px; max-width: 560px; }
 </style>

@@ -11,7 +11,6 @@ const applicants = computed(() => [
   <section id="how" class="how">
     <div class="wrap grid">
       <div>
-        <div class="eyebrow e">{{ t.howE }}</div>
         <h2 class="h2 big h">{{ t.howH }}</h2>
         <div class="apps">
           <a v-for="a in applicants" :key="a.tone" href="#decision" class="app">
@@ -38,24 +37,23 @@ const applicants = computed(() => [
 </template>
 
 <style scoped>
-.how { background: var(--deep-ink); color: #FFFFFF; }
-.grid { padding-top: 56px; padding-bottom: 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 24px; align-items: center; }
-.e { color: var(--blue-light); }
+.how { background: var(--navy-2); color: #FFFFFF; }
+.grid { padding-top: 40px; padding-bottom: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 24px; align-items: center; }
 .h { color: #FFFFFF; }
 .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 10px; margin-top: 22px; }
-.app { display: flex; flex-direction: column; gap: 6px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(144, 208, 222, 0.22); border-radius: 14px; padding: 14px 16px; color: #FFFFFF; }
+.app { display: flex; flex-direction: column; gap: 6px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(143, 211, 244, 0.22); border-radius: 14px; padding: 14px 16px; color: #FFFFFF; }
 .app:hover { color: #FFFFFF; background: rgba(255, 255, 255, 0.1); }
 .app-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.app-n { font-size: 14px; font-weight: 800; }
+.app-n { font-size: 14px; font-weight: 600; }
 .badge { font-size: 10.5px; padding: 3px 9px; }
-.app-b { font-size: 12.5px; color: var(--teal-200); line-height: 1.45; }
+.app-b { font-size: 12.5px; color: var(--lav-200); line-height: 1.45; }
 .side { display: flex; flex-direction: column; gap: 18px; }
-p { font-size: 15px; color: var(--teal-200); line-height: 1.65; margin: 0; max-width: 520px; }
+p { font-size: 15px; color: var(--lav-200); line-height: 1.65; margin: 0; max-width: 520px; }
 .steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
 .step { display: flex; flex-direction: column; gap: 8px; color: #FFFFFF; }
-.step:hover { color: var(--blue-light); }
-.bar { height: 3px; border-radius: 2px; background: var(--blue); }
-.d { font-size: 11px; font-weight: 700; color: var(--blue-light); }
+.step:hover { color: var(--cyan-light); }
+.bar { height: 3px; border-radius: 2px; background: var(--cyan); }
+.d { font-size: 11px; font-weight: 700; color: var(--cyan-light); }
 .n { font-size: 13.5px; font-weight: 700; line-height: 1.3; }
 
 @media (max-width: 420px) {
